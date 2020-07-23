@@ -8,14 +8,12 @@
 	background: #a7ddddfb;		
 }
 
-.hides{
-	display:none;
-}
 
 #slider-mentor{
 	-webkit-appearance:none;
 	background-color:red;
 	height:7px;
+	border-radius:7px;
 }
 #slider-mentor:focus{
 	outline:none;
