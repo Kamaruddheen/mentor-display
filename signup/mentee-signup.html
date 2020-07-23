@@ -14,9 +14,40 @@
 						</div>
 
 						<div class="modal-body p-0 d-flex flex-column align-items-center" id="form-mentee">
+
 							<div class="row w-75 mb-4 mt-3">
 								<div class="col px-0">
-									<label for="username-mentee">User name <span>*</span></label>
+
+									<div class="d-flex align-items-center justify-content-around">
+
+										<img src="profile.png" class="rounded-circle bg-white" id="img-mentee"
+											style="width: 100px;height: 100px; border: 5px solid white;">
+									</div>
+
+									<div class="d-flex align-items-center justify-content-around mt-4">
+										<div class="input-group w-100">
+											<div class="custom-file">
+												<input type="file" class="custom-file-input m-2" id="upload-mentee"
+													aria-describedby="inputGroupFileAddon01">
+												<label class="custom-file-label" for="upload-mentee">Choose
+												</label>
+
+											</div>
+											<div class="input-group-append">
+												<button class="btn btn-danger" type="button"
+													id="img-clear-mentee">Clear</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row w-75 mb-4 mt-3">
+								<div class="col px-0">
+									<label for="username-mentee">User name <span>*</span> <i
+											id="username-tooltip-mentee" type="button" class="fas fa-info-circle"
+											data-toggle="tooltip" data-placement="right"
+											title="This is temporary"></i></label>
 									<input type="text" class="form-control" id="username-mentee">
 								</div>
 							</div>
@@ -131,11 +162,19 @@
 								</div>
 							</div>
 
+
 							<div class="row w-75 mb-4 startup-row">
-								<div class="col custom-control custom-checkbox">
-									<input type="checkbox" class="custom-control-input" id="startup-mentee">
-									<label for="startup-mentee" class="custom-control-label">Startup
-										<span>*</span></label>
+
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<div class="col custom-control custom-checkbox">
+											<input type="checkbox" class="custom-control-input" id="startup-mentee">
+											<label for="startup-mentee" class="custom-control-label">Startup <i
+													id="startup-tooltip-mentee" type="button" class="fas fa-info-circle"
+													data-toggle="tooltip" data-placement="right"
+													title="Check this if you have already started your Company or Business"></i></label>
+										</div>
+									</div>
 								</div>
 							</div>
 
@@ -157,6 +196,7 @@
 
 	<script>
 		$(document).ready(function () {
+
 			$("#signup-mentee").click(function () {
 				$("#mymodal-mentee").modal("show");
 			});
@@ -187,33 +227,56 @@
 				}
 			});
 
-		});
+			$("#img-clear-mentee").click(function () {
+				$('#img-mentee').removeAttr('src')
+				$('#img-mentee').show();
+			});
 
-		$("#startup-mentee").click(function () {
-			if ($(this).is(":checked")) {
-				$(".startup-row").after("<div class='row w-75 mb-4 removing-content'>" +
-					"<div class='col px-0'>" +
-					"<label for='occupation'>Company Name <span>*</span></label>" +
-					"<input type='text' id='occupation' class='form-control' >" +
-					"</div>" +
-					"</div>" +
+			$("#upload-mentee").change(function () {
+				readURL(this);
+			});
 
-					"<div class='row w-75 mb-4 removing-content'>" +
-					"<div class='col px-0'>" +
-					"<label for='company'>Company Description <span>*</span></label>" +
-					"<textarea id='company' class='form-control' rows='5'></textarea>" +
-					"</div>" +
-					"</div>");
-			}
-			else {
-				$(".row").remove(".removing-content")
-			}
+			$("#startup-mentee").click(function () {
+				if ($(this).is(":checked")) {
+					$(".startup-row").after("<div class='row w-75 mb-4 removing-content'>" +
+						"<div class='col px-0'>" +
+						"<label for='occupation'>Company Name <span>*</span></label>" +
+						"<input type='text' id='occupation' class='form-control' >" +
+						"</div>" +
+						"</div>" +
+
+						"<div class='row w-75 mb-4 removing-content'>" +
+						"<div class='col px-0'>" +
+						"<label for='company'>Company Description <span>*</span></label>" +
+						"<textarea id='company' class='form-control' rows='5'></textarea>" +
+						"</div>" +
+						"</div>");
+				}
+				else {
+					$(".row").remove(".removing-content")
+				}
+			});
+
 		});
 
 		function myfunction() {
 			$(".row").remove(".removing-content");
 		}
 
+		function readURL(input) {
+			if (input.files && input.files[0]) {
+				var reader = new FileReader();
+
+				reader.onload = function (e) {
+					$('#img-mentee').attr('src', e.target.result);
+				}
+				reader.readAsDataURL(input.files[0]);
+			}
+		}
+
+		$(function () {
+			$('[data-toggle="tooltip"]').tooltip()
+		})
 	</script>
 </body>
 

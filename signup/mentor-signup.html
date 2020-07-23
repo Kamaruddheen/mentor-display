@@ -15,10 +15,29 @@
 
 						<div class="modal-body p-0 d-flex flex-column align-items-center" id="form-mentor">
 
-							<div class="row w-75 mb-4 mt-3">
+							<div class="row w-75 mb-4 mt-4">
 								<div class="col px-0">
-									<label for="username-mentor">User name<span>*</span></label>
-									<input type="text" class="form-control" id="username-mentor">
+
+									<div class="d-flex align-items-center justify-content-around">
+										<img src="profile.png" class="rounded-circle bg-white" id="img-mentor"
+											style="width: 100px;height: 100px; border: 5px solid white;">
+									</div>
+
+									<div class="d-flex align-items-center justify-content-around mt-4">
+										<div class="input-group w-100">
+											<div class="custom-file">
+												<input type="file" class="custom-file-input m-2" id="upload-mentor"
+													aria-describedby="inputGroupFileAddon01">
+												<label class="custom-file-label" for="upload-mentee">Choose
+												</label>
+
+											</div>
+											<div class="input-group-append">
+												<button class="btn btn-danger" type="button"
+													id="img-clear-mentor">Clear</button>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 
@@ -32,6 +51,27 @@
 								</div>
 								<div class="col-12 px-0  col-md-6 pr-md-0 pl-md-3">
 									<input type="text" placeholder="Last Name" class="form-control">
+								</div>
+							</div>
+
+							<div class="row w-75 mb-4 mt-3">
+								<div class="col px-0">
+									<label for="username-mentor">User name <span>*</span> <i
+											id="username-tooltip-mentor" type="button" class="fas fa-info-circle"
+											data-toggle="tooltip" data-placement="right"
+											title="This is temporary"></i></label>
+									<input type="text" class="form-control" id="username-mentor">
+								</div>
+							</div>
+
+							<div class="row w-75 mb-4 mt-3">
+								<div class="col px-0">
+									<label for="shortbio-mentor">Short Bio <span>*</span> <i
+											id="shortbio-tooltip-mentor" type="button" class="fas fa-info-circle"
+											data-toggle="tooltip" data-placement="right"
+											title="Minimun 30 and Maximum 80 letter"></i></label>
+									<input type="text" rows="3" minlength="30" maxlength="80" class="form-control"
+										id="shortbio-mentor" />
 								</div>
 							</div>
 
@@ -149,7 +189,11 @@
 
 							<div class="row mb-2 w-75">
 								<div class=" col  px-0 col-md-6 pl-md-0 pr-md-3 d-flex flex-column">
-									<label for="slider-value-mentor">Pay Rate <span>*</span></label>
+									<label for="slider-value-mentor">Pay Rate <span>*</span> <i
+											id="payrate-tooltip-mentor" type="button" class="fas fa-info-circle"
+											data-toggle="tooltip" data-placement="right"
+											title="This is temporary"></i></label>
+
 									<input type="range" min="0" max="500000" id="slider-mentor" value="0" class="mb-3">
 									<input type="text" class="form-control" id="slider-value-mentor" placeholder="0">
 								</div>
@@ -185,6 +229,11 @@
 				$("#mymodal-mentor").modal("hide");
 			});
 
+			$("#img-clear-mentor").click(function () {
+				$('#img-mentor').removeAttr('src')
+				$('#img-mentor').show();
+			});
+
 			$("#password-icon-mentor").click(function () {
 				$(this).toggleClass(" fa-eye fa-eye-slash");
 				if ($("#password-mentor").attr("type") == "password") {
@@ -207,9 +256,25 @@
 				$("#slider-value-mentor").val($("#slider-mentor").val());
 			});
 
+			$("#upload-mentor").change(function () {
+				readURL(this);
+			});
 		});
 
+		$(function () {
+			$('[data-toggle="tooltip"]').tooltip()
+		})
 
+		function readURL(input) {
+			if (input.files && input.files[0]) {
+				var reader = new FileReader();
+
+				reader.onload = function (e) {
+					$('#img-mentor').attr('src', e.target.result);
+				}
+				reader.readAsDataURL(input.files[0]);
+			}
+		}
 	</script>
 </body>
 
