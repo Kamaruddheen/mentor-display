@@ -1,12 +1,23 @@
-#form{
-	 background: #a7ddddfb;
-      /*background: linear-gradient(7deg, rgba(53, 91, 192, 1) 0%, rgba(44, 130, 186, 1) 33%, rgba(44, 130, 186, 1) 67%, rgba(53, 91, 192, 1) 100%);
+#form-mentee{
+	background: #a7ddddfb;
+    /*background: linear-gradient(7deg, rgba(53, 91, 192, 1) 0%, rgba(44, 130, 186, 1) 33%, rgba(44, 130, 186, 1) 67%, rgba(53, 91, 192, 1) 100%);
 */
-	}
+}
+
+#form-mentor{
+	background: #a7ddddfb;		
+}
+
+.hides{
+	display:none;
+}
+
+span{
+	color:red;
+}
 
 label{
-	font-weight:700;
-	
+	font-weight:700;	
 }
 
 button {
@@ -34,22 +45,4 @@ button:focus{
 		width:100%;
 		margin:0px;
 	}
-
-}
-
-.hides{
-	display:none;
-}
-
-span{
-	color:red;
-}
- 
-#slider{
-	-webkit-appearance:none;
-	background-color:red;
-	height:7px;
-}
-#slider:focus{
-	outline:none;
 }

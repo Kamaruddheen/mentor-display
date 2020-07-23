@@ -13,20 +13,22 @@
 							<button type="reset" id="exit-in-signup-mentor" class="close">&times;</button>
 						</div>
 
-						<div class="modal-body p-0 d-flex flex-column align-items-center" id="form">
+						<div class="modal-body p-0 d-flex flex-column align-items-center" id="form-mentor">
+
 							<div class="row w-75 mb-4 mt-3">
 								<div class="col px-0">
-									<label for="username">User name<span>*</span></label>
-									<input type="text" class="form-control" id="username">
+									<label for="username-mentor">User name<span>*</span></label>
+									<input type="text" class="form-control" id="username-mentor">
 								</div>
 							</div>
+
 							<div class="row w-75">
-								<label for="name">Name <span>*</span></label>
+								<label for="name-mentor">Name <span>*</span></label>
 							</div>
 
 							<div class="row w-75 mb-4">
 								<div class="col-12 px-0 mb-2 col-md-6 pl-md-0 pr-md-3 mb-md-0">
-									<input type="text" placeholder="First Name" class="form-control" id="name">
+									<input type="text" placeholder="First Name" class="form-control" id="name-mentor">
 								</div>
 								<div class="col-12 px-0  col-md-6 pr-md-0 pl-md-3">
 									<input type="text" placeholder="Last Name" class="form-control">
@@ -36,26 +38,29 @@
 							<div class="row w-75 mb-4">
 
 								<div class="col-12 px-0 mb-3 col-sm-6 pl-sm-0 pr-sm-3 mb-sm-0">
-									<label for="dob">Date of Birth <span>*</span></label>
-									<input type="date" class="form-control" id="dob">
+									<label for="dob-mentor">Date of Birth <span>*</span></label>
+									<input type="date" class="form-control" id="dob-mentor">
 								</div>
 
 								<div class="col-12 px-0 col-sm-6 pr-sm-0 pl-sm-3">
-									<label for="gender-group" class="mb-2">Gender <span>*</span></label>
-									<div class="d-flex justify-content-around" id="gender-group">
+									<label for="gender-group-mentor" class="mb-2">Gender <span>*</span></label>
+									<div class="d-flex justify-content-around" id="gender-group-mentor">
 										<div class="custom-control custom-radio custom-control-inline">
-											<input type="radio" class="custom-control-input" name="gender" id="male">
-											<label class="custom-control-label" for="male"
+											<input type="radio" class="custom-control-input" name="gender-mentor"
+												id="male-mentor">
+											<label class="custom-control-label" for="male-mentor"
 												id="genderM-mentor">Male</label>
 										</div>
 										<div class="custom-control custom-radio custom-control-inline ">
-											<input class="custom-control-input" type="radio" name="gender" id="female">
-											<label class="custom-control-label" for="female"
+											<input class="custom-control-input" type="radio" name="gender-mentor"
+												id="female-mentor">
+											<label class="custom-control-label" for="female-mentor"
 												id="genderF-mentor">Female</label>
 										</div>
 										<div class="custom-control custom-radio custom-control-inline">
-											<input class="custom-control-input" type="radio" id="others" name="gender">
-											<label class="custom-control-label" for="others"
+											<input class="custom-control-input" type="radio" name="gender-mentor"
+												id="others-mentor">
+											<label class="custom-control-label" for="others-mentor"
 												id="genderO-mentor">Others</label>
 										</div>
 									</div>
@@ -65,15 +70,15 @@
 							<div class="row mb-4 w-75">
 
 								<div class="col-12 px-0 mb-4 col-md-6 pl-md-0 pr-md-3 mb-md-0">
-									<label for="email">Email <span>*</span></label>
-									<input type="email" class="form-control" id="email"
+									<label for="email-mentor">Email <span>*</span></label>
+									<input type="email" class="form-control" id="email-mentor"
 										placeholder="abc123@example.com">
 								</div>
 
 								<div class="col-12 px-0 col-md-6 pr-md-0 pl-md-3">
-									<label for="contact">Contact No. <span>*</span></label>
-									<input type="tel" id="contact" class="form-control" placeholder="+91 1234567890"
-										pattern="[0-9]{10}">
+									<label for="contact-mentor">Contact No. <span>*</span></label>
+									<input type="tel" id="contact-mentor" class="form-control"
+										placeholder="+91 1234567890" pattern="[0-9]{10}">
 								</div>
 							</div>
 
@@ -86,7 +91,7 @@
 											placeholder="Password">
 										<div class="input-group-append">
 											<div class="input-group-text">
-												<i class="fa fa-eye" type="button" id="password-icon-mentor"></i>
+												<i class="fa fa-eye-slash" type="button" id="password-icon-mentor"></i>
 											</div>
 										</div>
 									</div>
@@ -99,7 +104,7 @@
 											placeholder="Confirm Password">
 										<div class="input-group-append">
 											<div class="input-group-text">
-												<i class="fa fa-eye" type="button" id="confirm-icon-mentor"></i>
+												<i class="fa fa-eye-slash" type="button" id="confirm-icon-mentor"></i>
 											</div>
 										</div>
 									</div>
@@ -108,23 +113,23 @@
 
 							<div class="row w-75 mb-4">
 								<div class="col px-0">
-									<label for="occupation">Occupation <span>*</span></label>
-									<input type="text" id="occupation" class="form-control field-reset">
+									<label for="occupation-mentor">Occupation <span>*</span></label>
+									<input type="text" id="occupation-mentor" class="form-control field-reset">
 								</div>
 							</div>
 
 							<div class="row w-75 mb-4">
 								<div class="col px-0">
-									<label for="company">Company <span>*</span></label>
-									<input type="text" id="company" class="form-control field-reset">
+									<label for="company-mentor">Company <span>*</span></label>
+									<input type="text" id="company-mentor" class="form-control field-reset">
 								</div>
 							</div>
 
 							<div class="row w-75 mb-4" id="field-row">
 
 								<div class="col-12 px-0 mb-4 col-md-6 pl-md-0 pr-md-3 mb-md-0">
-									<label for="field">Field <span>*</span></label>
-									<select class="custom-select field-reset" id="field">
+									<label for="field-mentor">Field <span>*</span></label>
+									<select class="custom-select field-reset" id="field-mentor">
 										<option></option>
 										<option>Agriculture</option>
 										<option>Computer</option>
@@ -133,8 +138,8 @@
 								</div>
 
 								<div class="col-12 px-0 col-md-6 pr-md-0 pl-md-3">
-									<label for="subfield">Subfield <span>*</span></label>
-									<select class="custom-select field-reset" id="subfield">
+									<label for="subfield-mentor">Subfield <span>*</span></label>
+									<select class="custom-select field-reset" id="subfield-mentor">
 										<option></option>
 										<option>Front end</option>
 										<option>Back end</option>
@@ -144,9 +149,9 @@
 
 							<div class="row mb-2 w-75">
 								<div class=" col  px-0 col-md-6 pl-md-0 pr-md-3 d-flex flex-column">
-									<label for="slider-value">Pay Rate <span>*</span></label>
-									<input type="range" min="0" max="500000" id="slider" value="0" class="mb-3">
-									<input type="text" class="form-control" id="slider-value" placeholder="0">
+									<label for="slider-value-mentor">Pay Rate <span>*</span></label>
+									<input type="range" min="0" max="500000" id="slider-mentor" value="0" class="mb-3">
+									<input type="text" class="form-control" id="slider-value-mentor" placeholder="0">
 								</div>
 							</div>
 
@@ -167,6 +172,7 @@
 
 	<script>
 		$(document).ready(function () {
+
 			$("#signup-mentor").click(function () {
 				$("#mymodal-mentor").modal("show");
 			});
@@ -197,8 +203,8 @@
 				}
 			});
 
-			$("#slider").on("input", function () {
-				$("#slider-value").val($("#slider").val());
+			$("#slider-mentor").on("input", function () {
+				$("#slider-value-mentor").val($("#slider-mentor").val());
 			});
 
 		});

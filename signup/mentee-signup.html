@@ -13,21 +13,21 @@
 							<button type="reset" id="exit-in-signup-mentee" class="close">&times;</button>
 						</div>
 
-						<div class="modal-body p-0 d-flex flex-column align-items-center" id="form">
+						<div class="modal-body p-0 d-flex flex-column align-items-center" id="form-mentee">
 							<div class="row w-75 mb-4 mt-3">
 								<div class="col px-0">
-									<label for="username">User name <span>*</span></label>
-									<input type="text" class="form-control" id="username">
+									<label for="username-mentee">User name <span>*</span></label>
+									<input type="text" class="form-control" id="username-mentee">
 								</div>
 							</div>
 
 							<div class="row w-75">
-								<label for="name">Name <span>*</span></label>
+								<label for="name-mentee">Name <span>*</span></label>
 							</div>
 
 							<div class="row w-75 mb-4">
 								<div class="col-12 px-0 mb-2 col-md-6 pl-md-0 pr-md-3 mb-md-0">
-									<input type="text" placeholder="First Name" class="form-control" id="name">
+									<input type="text" placeholder="First Name" class="form-control" id="name-mentee">
 								</div>
 								<div class="col-12 px-0  col-md-6 pr-md-0 pl-md-3">
 									<input type="text" placeholder="Last Name" class="form-control">
@@ -37,26 +37,29 @@
 							<div class="row w-75 mb-4">
 
 								<div class="col-12 px-0 mb-3 col-sm-6 pl-sm-0 pr-sm-3 mb-sm-0">
-									<label for="dob">Date of Birth <span>*</span></label>
-									<input type="date" class="form-control" id="dob">
+									<label for="dob-mentee">Date of Birth <span>*</span></label>
+									<input type="date" class="form-control" id="dob-mentee">
 								</div>
 
 								<div class="col-12 px-0 col-sm-6 pr-sm-0 pl-sm-3">
-									<label for="gender-group" class="mb-2">Gender <span>*</span></label>
-									<div class="d-flex justify-content-around" id="gender-group">
+									<label for="gender-group-mentee" class="mb-2">Gender <span>*</span></label>
+									<div class="d-flex justify-content-around" id="gender-group-mentee">
 										<div class="custom-control custom-radio custom-control-inline">
-											<input type="radio" class="custom-control-input" name="gender" id="male">
-											<label class="custom-control-label" for="male"
+											<input type="radio" class="custom-control-input" name="gender-mentee"
+												id="male-mentee">
+											<label class="custom-control-label" for="male-mentee"
 												id="genderM-mentee">Male</label>
 										</div>
 										<div class="custom-control custom-radio custom-control-inline ">
-											<input class="custom-control-input" type="radio" name="gender" id="female">
-											<label class="custom-control-label" for="female"
+											<input class="custom-control-input" type="radio" name="gender-mentee"
+												id="female-mentee">
+											<label class="custom-control-label" for="female-mentee"
 												id="genderF-mentee">Female</label>
 										</div>
 										<div class="custom-control custom-radio custom-control-inline">
-											<input class="custom-control-input" type="radio" id="others" name="gender">
-											<label class="custom-control-label" for="others"
+											<input class="custom-control-input" type="radio" name="gender-mentee"
+												id="others-mentee">
+											<label class="custom-control-label" for="others-mentee"
 												id="genderO-mentee">Others</label>
 										</div>
 									</div>
@@ -66,15 +69,15 @@
 							<div class="row mb-4 w-75">
 
 								<div class="col-12 px-0 mb-4 col-md-6 pl-md-0 pr-md-3 mb-md-0">
-									<label for="email">Email <span>*</span></label>
-									<input type="email" class="form-control" id="email"
+									<label for="email-mentee">Email <span>*</span></label>
+									<input type="email" class="form-control" id="email-mentee"
 										placeholder="abc123@example.com">
 								</div>
 
 								<div class="col-12 px-0 col-md-6 pr-md-0 pl-md-3">
-									<label for="contact">Contact No. <span>*</span></label>
-									<input type="tel" id="contact" class="form-control" placeholder="+91 1234567890"
-										pattern="[0-9]{10}">
+									<label for="contact-mentee">Contact No. <span>*</span></label>
+									<input type="tel" id="contact-mentee" class="form-control"
+										placeholder="+91 1234567890" pattern="[0-9]{10}">
 								</div>
 							</div>
 
@@ -86,7 +89,7 @@
 											placeholder="Password">
 										<div class="input-group-append">
 											<div class="input-group-text">
-												<i class="fa fa-eye" type="button" id="password-icon-mentee"></i>
+												<i class="fa fa-eye-slash" type="button" id="password-icon-mentee"></i>
 											</div>
 										</div>
 									</div>
@@ -99,7 +102,7 @@
 											placeholder="Confirm Password">
 										<div class="input-group-append">
 											<div class="input-group-text">
-												<i class="fa fa-eye" type="button" id="confirm-icon-mentee"></i>
+												<i class="fa fa-eye-slash" type="button" id="confirm-icon-mentee"></i>
 											</div>
 										</div>
 									</div>
@@ -109,8 +112,8 @@
 							<div class="row w-75 mb-4" id="field-row">
 
 								<div class="col-12 px-0 mb-4 col-md-6 pl-md-0 pr-md-3 mb-md-0">
-									<label for="field">Field <span>*</span></label>
-									<select class="custom-select field-reset" id="field">
+									<label for="field-mentee">Field <span>*</span></label>
+									<select class="custom-select field-reset" id="field-mentee">
 										<option></option>
 										<option>Agriculture</option>
 										<option>Computer</option>
@@ -119,8 +122,8 @@
 								</div>
 
 								<div class="col-12 px-0 col-md-6 pr-md-0 pl-md-3">
-									<label for="subfield">Subfield <span>*</span></label>
-									<select class="custom-select field-reset" id="subfield">
+									<label for="subfield-mentee">Subfield <span>*</span></label>
+									<select class="custom-select field-reset" id="subfield-mentee">
 										<option></option>
 										<option>Front end</option>
 										<option>Back end</option>
@@ -130,8 +133,9 @@
 
 							<div class="row w-75 mb-4 startup-row">
 								<div class="col custom-control custom-checkbox">
-									<input type="checkbox" class="custom-control-input" id="startup">
-									<label for="startup" class="custom-control-label">Startup <span>*</span></label>
+									<input type="checkbox" class="custom-control-input" id="startup-mentee">
+									<label for="startup-mentee" class="custom-control-label">Startup
+										<span>*</span></label>
 								</div>
 							</div>
 
@@ -183,13 +187,9 @@
 				}
 			});
 
-			$("#slider").on("input", function () {
-				$("#slider-value").val($("#slider").val());
-			});
-
 		});
 
-		$("#startup").click(function () {
+		$("#startup-mentee").click(function () {
 			if ($(this).is(":checked")) {
 				$(".startup-row").after("<div class='row w-75 mb-4 removing-content'>" +
 					"<div class='col px-0'>" +
