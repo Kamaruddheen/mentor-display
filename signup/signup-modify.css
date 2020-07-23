@@ -12,13 +12,12 @@
 	display:none;
 }
 
-#slider{
+#slider-mentor{
 	-webkit-appearance:none;
-	background-color:#0075FF;
+	background-color:red;
 	height:7px;
 }
-
-#slider:focus{
+#slider-mentor:focus{
 	outline:none;
 }
 
