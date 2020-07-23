@@ -1,0 +1,55 @@
+#form{
+	 background: #a7ddddfb;
+      /*background: linear-gradient(7deg, rgba(53, 91, 192, 1) 0%, rgba(44, 130, 186, 1) 33%, rgba(44, 130, 186, 1) 67%, rgba(53, 91, 192, 1) 100%);
+*/
+	}
+
+label{
+	font-weight:700;
+	
+}
+
+button {
+	transition: transform 80ms ease-in;
+}
+
+button:active {
+	transform: scale(0.95);
+}
+
+button:focus{
+	outline: none !important;
+}
+
+@media only screen and (min-width:768px) and (max-width:991px){
+	.modal-md{
+		max-width:700px;
+	}
+}
+
+@media only screen and (min-width:300px) and (max-width:767px){
+	.modal-sm{
+		max-width:100%;
+		max-height:100%;
+		width:100%;
+		margin:0px;
+	}
+
+}
+
+.hides{
+	display:none;
+}
+
+span{
+	color:red;
+}
+ 
+#slider{
+	-webkit-appearance:none;
+	background-color:red;
+	height:7px;
+}
+#slider:focus{
+	outline:none;
+}
