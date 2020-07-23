@@ -12,6 +12,16 @@
 	display:none;
 }
 
+#slider{
+	-webkit-appearance:none;
+	background-color:#0075FF;
+	height:7px;
+}
+
+#slider:focus{
+	outline:none;
+}
+
 span{
 	color:red;
 }
