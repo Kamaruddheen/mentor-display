@@ -3,7 +3,7 @@
 
 <body>
 	<div>
-		<form action="#" method="" onreset="myfunction()">
+		<form action="#" method="" onreset="myfunction()" novalidate>
 			<!-- why inside form modals? Because incase if i want to add another modals in future both modals should be worked as independent.For that modals are inside the forms-->
 			<div class="modal fade " id="mymodal-mentee" style="overflow:scroll">
 				<div class="modal-dialog modal-lg modal-md modal-sm">
@@ -46,15 +46,18 @@
 									<div class="d-flex justify-content-around" id="gender-group">
 										<div class="custom-control custom-radio custom-control-inline">
 											<input type="radio" class="custom-control-input" name="gender" id="male">
-											<label class="custom-control-label" for="male" id="genderM">Male</label>
+											<label class="custom-control-label" for="male"
+												id="genderM-mentee">Male</label>
 										</div>
 										<div class="custom-control custom-radio custom-control-inline ">
 											<input class="custom-control-input" type="radio" name="gender" id="female">
-											<label class="custom-control-label" for="female" id="genderF">Female</label>
+											<label class="custom-control-label" for="female"
+												id="genderF-mentee">Female</label>
 										</div>
 										<div class="custom-control custom-radio custom-control-inline">
 											<input class="custom-control-input" type="radio" id="others" name="gender">
-											<label class="custom-control-label" for="others" id="genderO">Others</label>
+											<label class="custom-control-label" for="others"
+												id="genderO-mentee">Others</label>
 										</div>
 									</div>
 								</div>
@@ -77,26 +80,26 @@
 
 							<div class="row w-75 mb-4">
 								<div class="col-12 px-0 mb-4 col-md-6 pl-md-0 pr-md-3 mb-md-0">
-									<label for="password">Password <span>*</span></label>
+									<label for="password-mentee">Password <span>*</span></label>
 									<div class="input-group">
-										<input type="password" class="form-control" id="password"
+										<input type="password" class="form-control" id="password-mentee"
 											placeholder="Password">
 										<div class="input-group-append">
 											<div class="input-group-text">
-												<i class="fa fa-eye" type="button" id="password-icon"></i>
+												<i class="fa fa-eye" type="button" id="password-icon-mentee"></i>
 											</div>
 										</div>
 									</div>
 								</div>
 
 								<div class="col-12 px-0 col-md-6 pr-md-0 pl-md-3">
-									<label for="confirm">Confirm Password <span>*</span></label>
+									<label for="confirm-mentee">Confirm Password <span>*</span></label>
 									<div class="input-group">
-										<input type="password" class="form-control" id="confirm"
+										<input type="password" class="form-control" id="confirm-mentee"
 											placeholder="Confirm Password">
 										<div class="input-group-append">
 											<div class="input-group-text">
-												<i class="fa fa-eye" type="button" id="confirm-icon"></i>
+												<i class="fa fa-eye" type="button" id="confirm-icon-mentee"></i>
 											</div>
 										</div>
 									</div>
@@ -162,21 +165,21 @@
 				$("#mymodal-mentee").modal("hide");
 			});
 
-			$("#password-icon").click(function () {
+			$("#password-icon-mentee").click(function () {
 				$(this).toggleClass(" fa-eye fa-eye-slash");
-				if ($("#password").attr("type") == "password") {
-					$("#password").attr("type", "text");
+				if ($("#password-mentee").attr("type") == "password") {
+					$("#password-mentee").attr("type", "text");
 				} else {
-					$("#password").attr("type", "password");
+					$("#password-mentee").attr("type", "password");
 				}
 			});
 
-			$("#confirm-icon").click(function () {
+			$("#confirm-icon-mentee").click(function () {
 				$(this).toggleClass(" fa-eye fa-eye-slash");
-				if ($("#confirm").attr("type") == "password") {
-					$("#confirm").attr("type", "text");
+				if ($("#confirm-mentee").attr("type") == "password") {
+					$("#confirm-mentee").attr("type", "text");
 				} else {
-					$("#confirm").attr("type", "password");
+					$("#confirm-mentee").attr("type", "password");
 				}
 			});
 
@@ -212,15 +215,15 @@
 		}
 
 		$(window).resize(function () {
-			if ($(window).width() >= 576 && $(window).width() < 992 || $(window).width() < 400) {
-				$("#genderM").html("<strong>M</strong");
-				$("#genderF").html("<strong>F</strong>");
-				$("#genderO").html("<strong>O</strong>");
+			if ($(window).width() >= 576 && $(window).width() < 700 || $(window).width() < 400) {
+				$("#genderM-mentee").html("<strong>M</strong");
+				$("#genderF-mentee").html("<strong>F</strong>");
+				$("#genderO-mentee").html("<strong>O</strong>");
 			}
 			else {
-				$("#genderM").text('Male');
-				$("#genderF").text('Female');
-				$("#genderO").text("Others");
+				$("#genderM-mentee").text('Male');
+				$("#genderF-mentee").text('Female');
+				$("#genderO-mentee").text("Others");
 			}
 		});
 	</script>
