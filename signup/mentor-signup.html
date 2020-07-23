@@ -54,17 +54,7 @@
 								</div>
 							</div>
 
-							<div class="row w-75 mb-4 mt-3">
-								<div class="col px-0">
-									<label for="username-mentor">User name <span>*</span> <i
-											id="username-tooltip-mentor" type="button" class="fas fa-info-circle"
-											data-toggle="tooltip" data-placement="right"
-											title="This is temporary"></i></label>
-									<input type="text" class="form-control" id="username-mentor">
-								</div>
-							</div>
-
-							<div class="row w-75 mb-4 mt-3">
+							<div class="row w-75 mb-4">
 								<div class="col px-0">
 									<label for="shortbio-mentor">Short Bio <span>*</span> <i
 											id="shortbio-tooltip-mentor" type="button" class="fas fa-info-circle"
@@ -107,7 +97,7 @@
 								</div>
 							</div>
 
-							<div class="row mb-4 w-75">
+							<div class="row w-75 mb-4">
 
 								<div class="col-12 px-0 mb-4 col-md-6 pl-md-0 pr-md-3 mb-md-0">
 									<label for="email-mentor">Email <span>*</span></label>
@@ -119,6 +109,16 @@
 									<label for="contact-mentor">Contact No. <span>*</span></label>
 									<input type="tel" id="contact-mentor" class="form-control"
 										placeholder="+91 1234567890" pattern="[0-9]{10}">
+								</div>
+							</div>
+
+							<div class="row w-75 mb-4">
+								<div class="col px-0">
+									<label for="username-mentor">User name <span>*</span> <i
+											id="username-tooltip-mentor" type="button" class="fas fa-info-circle"
+											data-toggle="tooltip" data-placement="right"
+											title="This is temporary"></i></label>
+									<input type="text" class="form-control" id="username-mentor">
 								</div>
 							</div>
 
@@ -187,7 +187,7 @@
 								</div>
 							</div>
 
-							<div class="row mb-2 w-75">
+							<div class="row w-75 mb-2">
 								<div class=" col  px-0 col-md-6 pl-md-0 pr-md-3 d-flex flex-column">
 									<label for="slider-value-mentor">Pay Rate <span>*</span> <i
 											id="payrate-tooltip-mentor" type="button" class="fas fa-info-circle"
@@ -203,7 +203,8 @@
 								<div class="col d-flex justify-content-center justify-content-md-end">
 									<button type="reset" class="btn btn-warning rounded mr-2"
 										id="cancel-mentor">Cancel</button>
-									<button type="reset" class="btn btn-danger rounded mr-2">Reset</button>
+									<button type="reset" class="btn btn-danger rounded mr-2"
+										id="reset-mentor">Reset</button>
 									<input type="submit" class="btn btn-success  rounded mr-2">
 								</div>
 							</div>
@@ -223,15 +224,19 @@
 
 			$("#cancel-mentor").click(function () {
 				$("#mymodal-mentor").modal("hide");
+				$('#img-mentor').attr('src', "profile.png");
 			});
+
+			$("#reset-mentor").click(function () {
+				$('#img-mentor').attr('src', "profile.png");
+			})
 
 			$("#exit-in-signup-mentor").click(function () {
 				$("#mymodal-mentor").modal("hide");
 			});
 
 			$("#img-clear-mentor").click(function () {
-				$('#img-mentor').removeAttr('src')
-				$('#img-mentor').show();
+				$('#img-mentor').attr('src', "profile.png");
 			});
 
 			$("#password-icon-mentor").click(function () {
@@ -257,24 +262,20 @@
 			});
 
 			$("#upload-mentor").change(function () {
-				readURL(this);
+				if (this.files && this.files[0]) {
+					var reader = new FileReader();
+
+					reader.onload = function (e) {
+						$('#img-mentor').attr('src', e.target.result);
+					}
+					reader.readAsDataURL(this.files[0]);
+				}
 			});
 		});
 
 		$(function () {
 			$('[data-toggle="tooltip"]').tooltip()
 		})
-
-		function readURL(input) {
-			if (input.files && input.files[0]) {
-				var reader = new FileReader();
-
-				reader.onload = function (e) {
-					$('#img-mentor').attr('src', e.target.result);
-				}
-				reader.readAsDataURL(input.files[0]);
-			}
-		}
 	</script>
 </body>
 

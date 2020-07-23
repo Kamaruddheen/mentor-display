@@ -56,16 +56,6 @@
 							</div>
 
 							<div class="row w-75 mb-4">
-								<div class="col px-0">
-									<label for="username-mentee">User name <span>*</span> <i
-											id="username-tooltip-mentee" type="button" class="fas fa-info-circle"
-											data-toggle="tooltip" data-placement="right"
-											title="This is temporary"></i></label>
-									<input type="text" class="form-control" id="username-mentee">
-								</div>
-							</div>
-
-							<div class="row w-75 mb-4">
 
 								<div class="col-12 px-0 mb-4 col-md-6 pl-md-0 pr-md-3 mb-md-0">
 									<label for="dob-mentee">Date of Birth <span>*</span></label>
@@ -97,7 +87,7 @@
 								</div>
 							</div>
 
-							<div class="row mb-4 w-75">
+							<div class="row w-75 mb-4">
 
 								<div class="col-12 px-0 mb-4 col-md-6 pl-md-0 pr-md-3 mb-md-0">
 									<label for="email-mentee">Email <span>*</span></label>
@@ -109,6 +99,16 @@
 									<label for="contact-mentee">Contact No. <span>*</span></label>
 									<input type="tel" id="contact-mentee" class="form-control"
 										placeholder="+91 1234567890" pattern="[0-9]{10}">
+								</div>
+							</div>
+
+							<div class="row w-75 mb-4">
+								<div class="col px-0">
+									<label for="username-mentee">User name <span>*</span> <i
+											id="username-tooltip-mentee" type="button" class="fas fa-info-circle"
+											data-toggle="tooltip" data-placement="right"
+											title="This is temporary"></i></label>
+									<input type="text" class="form-control" id="username-mentee">
 								</div>
 							</div>
 
@@ -162,9 +162,7 @@
 								</div>
 							</div>
 
-
 							<div class="row w-75 mb-4 startup-row">
-
 								<div class="input-group mb-3">
 									<div class="input-group-prepend">
 										<div class="col custom-control custom-checkbox">
@@ -182,7 +180,8 @@
 								<div class="col d-flex justify-content-center justify-content-md-end">
 									<button type="reset" class="btn btn-warning rounded mr-2"
 										id="cancel-mentee">Cancel</button>
-									<button type="reset" class="btn btn-danger rounded mr-2">Reset</button>
+									<button type="reset" class="btn btn-danger rounded mr-2"
+										id="reset-mentee">Reset</button>
 									<input type="submit" class="btn btn-success  rounded mr-2">
 								</div>
 							</div>
@@ -203,7 +202,12 @@
 
 			$("#cancel-mentee").click(function () {
 				$("#mymodal-mentee").modal("hide");
+				$('#img-mentee').attr('src', "profile.png");
 			});
+
+			$("#reset-mentee").click(function () {
+				$('#img-mentee').attr('src', "profile.png");
+			})
 
 			$("#exit-in-signup-mentee").click(function () {
 				$("#mymodal-mentee").modal("hide");
@@ -228,12 +232,18 @@
 			});
 
 			$("#img-clear-mentee").click(function () {
-				$('#img-mentee').removeAttr('src')
-				$('#img-mentee').show();
+				$('#img-mentee').attr('src', "profile.png");
 			});
 
 			$("#upload-mentee").change(function () {
-				readURL(this);
+				if (this.files && this.files[0]) {
+					var reader = new FileReader();
+
+					reader.onload = function (e) {
+						$('#img-mentee').attr('src', e.target.result);
+					}
+					reader.readAsDataURL(this.files[0]);
+				}
 			});
 
 			$("#startup-mentee").click(function () {
@@ -261,17 +271,6 @@
 
 		function myfunction() {
 			$(".row").remove(".removing-content");
-		}
-
-		function readURL(input) {
-			if (input.files && input.files[0]) {
-				var reader = new FileReader();
-
-				reader.onload = function (e) {
-					$('#img-mentee').attr('src', e.target.result);
-				}
-				reader.readAsDataURL(input.files[0]);
-			}
 		}
 
 		$(function () {
