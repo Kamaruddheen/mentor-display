@@ -47,8 +47,6 @@ body {
     background-color: transparent !important;    
   }
 
-
-
   .media-meta-day {
     -webkit-box-pack: justify;
     justify-content: space-between;
@@ -59,7 +57,7 @@ body {
     opacity: .8;
     font-weight: 400;
   }
-  
+
   .media-meta-day::before {
     margin-right: 16px;
   }
@@ -82,27 +80,3 @@ body {
   .media-meta-day::after {
     margin-left: 16px
   }
-
-  .media-chat.media-chat-reverse {
-    padding-right: 12px;
-    padding-left: 64px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-    flex-direction: row-reverse
-  }
-
-  .media-chat.media-chat-reverse .media-body p {
-    float: right;
-    clear: right;
-    background-color: #48b0f7;
-    color: #fff
-  }
-  
-  .media-chat .media-body  p {
-    position: relative;
-    padding: 6px 8px;
-    margin: 4px 0;
-    background-color: #f5f6f7;
-    border-radius: 3px
-  }
-    

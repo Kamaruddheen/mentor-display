@@ -194,15 +194,24 @@
                                 </div>
                             </div>
 
+                            <div class="media mb-0 mx-2 p-2" id="user-2">
+                                <div class="media-body mx-2" id="mentor-msg">
+
+                                    <p class="meta p-0 d-flex justify-content-end"><time datetime="2020"
+                                            class="text-muted" id="msg-time-mentor"></time></p>
+                                </div>
+                            </div>
+
                         </div>
 
                         <!-- Message input box -->
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Type a message"
-                                aria-label="message-mentor" aria-describedby="send-icon-mentor">
+                                aria-label="message-mentor" aria-describedby="send-icon-mentor"
+                                id="sending-message-mentor">
                             <div class="input-group-prepend mr-0">
-                                <span class="input-group-text" id="send-icon-mentor"><i
-                                        class="fas fa-paper-plane"></i></span>
+                                <button class="input-group-text" id="send-icon-mentor"><i
+                                        class="fas fa-paper-plane"></i></button>
                             </div>
                         </div>
 
@@ -212,5 +221,16 @@
         </div>
     </div>
 
+    <script>
 
+        $(document).ready(function () {
+
+            $("#send-icon-mentor").click(function () {
+                var txt2 = $("<p></p>").text($("#sending-message-mentor").val());
+                $("#mentor-msg").append(txt2);
+            })
+
+        });
+
+    </script>
 </body>
