@@ -236,14 +236,13 @@
                         </div>
                         <!-- User Message -->
                         <div class="container p-0 bg-white" id="chat" style="overflow-y: scroll !important;">
-
-                            <div class="container justify-content-center p-0" style="height: 20px;">
-                                <div class="p-0 justify-content-center d-flex rounded-pill"
-                                    style="background-color: #afafaf41!important;">
-                                    <label class="btn badge badge-pill badge-light  mb-0">Unread Messages</label>
+                            <!--
+                            <div class="container justify-content-center p-0 cont-h">
+                                <div class="p-0 justify-content-center d-flex rounded-pill bg-cust">
+                                    <label class="btn badge badge-pill badge-light mb-0">Unread Messages</label>
                                 </div>
                             </div>
-
+                            -->
                         </div>
 
                         <!-- Message input box -->
@@ -321,6 +320,16 @@
                         var styled_msg = $("<p></p>").text(msg_mentor).addClass("user1 order-1").append(styled_msg_time);
                         var media_body_msg = $("<div></div>").addClass("media-body mx-2").append(styled_msg);
                         var media_msg = $("<div></div>").addClass("media mb-0 mx-2 p-2").append(media_body_msg);
+
+                        var unread_msg_user1 = $("<label></label>").addClass("btn badge badge-pill badge-light mb-0").text("Unread Messages");
+                        var div_msg_user1 = $("<div></div>").addClass("p-0 justify-content-center d-flex rounded-pill bg-cust").append(unread_msg_user1);
+                        var container_msg_user1 = $("<div></div>").addClass("container justify-content-center p-0 cont-h").append(div_msg_user1).attr('id', '1');
+
+                        $("#chat").append(container_msg_user1);
+
+                        setTimeout(function () {
+                            $("#1").remove();
+                        }, 1000);
 
                         $("#chat").append(media_msg);  // message style for you
 

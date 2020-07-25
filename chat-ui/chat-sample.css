@@ -144,4 +144,10 @@ body {
     cursor: pointer;
   }
 
-  
+  .cont-h{
+    height: 20px;
+  }
+
+  .bg-cust{
+    background-color: #afafaf41;
+  }
