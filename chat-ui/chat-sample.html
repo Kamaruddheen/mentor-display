@@ -149,8 +149,11 @@
 
                         <!-- User Message -->
                         <div class="container p-0 bg-white" id="chat"
-                            style="overflow-y: scroll !important; height:454px !important;">
+                            style="overflow-y: scroll !important; height: 454px;">
 
+                            <div class="container">
+                                
+                            </div>
 
                         </div>
 
@@ -197,8 +200,12 @@
 
                     $("#chat").append(media_msg);    // message style for me
 
-                    $('#chat').addClass("scroll-beh");      // adding smooth scrolling for each message
-                    $('#chat').scrollTop($(document).height());    // scroll to bottom for each message
+                    // scrollTop = scrollHeight - clientHeight
+                    var h = document.getElementById("chat").clientHeight;
+                    var elmnt = document.getElementById("chat");
+                    var y = elmnt.scrollHeight;
+                    $('#chat').scrollTop(y - h);
+
                     $("#sending-message-mentor").val('');   // empty input box after sending message
                 }
             })
@@ -226,8 +233,12 @@
 
                         $("#chat").append(media_msg);  // message style for you
 
-                        $('#chat').addClass("scroll-beh");      // adding smooth scrolling for each message
-                        $('#chat').scrollTop($(document).height());     // scroll to bottom for each message
+                        // scrollTop = scrollHeight - clientHeight
+                        var h = document.getElementById("chat").clientHeight;
+                        var elmnt = document.getElementById("chat");
+                        var y = elmnt.scrollHeight;
+                        $('#chat').scrollTop(y - h);
+
                         $("#sending-message-mentor").val('');   // empty input box after sending message
                     }
                 }
