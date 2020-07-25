@@ -18,6 +18,35 @@
     <link rel="stylesheet" href="chat-sample.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script>
+        $(window).resize(function () {
+            if ($(window).width() <= 767) {
+                $("#chat").css("height", $(window).height() - 183);
+                $("#sidebar").addClass("sidebar animate__animated animate__slideInLeft");
+                $("#sidebar_close_top").css("display", "flex");
+
+                $('#goo').click(function () {
+                    $('#sidebar').css("display", "block");
+                    $('#sidebar').removeClass("animate__slideOutLeft");
+                    $('#sidebar').addClass("animate__slideInLeft");
+                    $('#overlay').css("display", "block");
+                });
+
+                $('#sidebar_close,#overlay').click(function () {
+                    $('#sidebar').removeClass("animate__slideInLeft");
+                    $('#sidebar').addClass("animate__slideOutLeft");
+                    $('#overlay').css("display", "none");
+                });
+            }
+            else {
+
+                $('#overlay').css("display", "none");
+                $("#sidebar").removeClass("sidebar animate__animated animate__slideInLeft");
+                $("#sidebar_close_top").css("display", "none");
+
+            }
+        });
+    </script>
 </head>
 
 <body>
@@ -36,15 +65,14 @@
                         </div>
 
                         <!-- People List Container -->
-                        <div class="container p-0 bg-info scroll-beh" id="chat-content"
-                            style="overflow-y: scroll !important;">
+                        <div class="container p-0  scroll-beh" id="chat-content" style="overflow-y: scroll !important;">
 
                             <div class="input-group p-1">
                                 <input type="text" class="form-control rounded-custom-left" placeholder="Search"
                                     aria-label="Username" aria-describedby="basic-addon1">
                                 <div class="input-group-prepend mr-0">
                                     <button type="button" class="input-group-text rounded-custom-right bg-white"
-                                        id="basic-addon1"><i class="fa fa-search"></i></button>
+                                        id="asd"><i class="fa fa-search"></i></button>
                                 </div>
                             </div>
                             <div class="dropdown-divider m-0"></div>
@@ -57,7 +85,9 @@
                                         style="width: 75px;height: 75px; border: 2px solid white;">
                                     <div class="media-body mx-2">
                                         <h6 class="text-white my-2 font-weight-bold">Muhammadh</h6>
-                                        <p class="text-white my-1">What are you doing</p>
+                                        <span class="badge badge-pill badge-danger"
+                                            style="float: right;min-width: 50px;">new</span>
+                                        <p class="text-white my-1">@user_id</p>
                                     </div>
                                 </div>
                             </a>
@@ -71,7 +101,9 @@
                                         style="width: 75px;height: 75px; border: 2px solid white;">
                                     <div class="media-body mx-2">
                                         <h6 class="text-white my-2 font-weight-bold">Muhammadh</h6>
-                                        <p class="text-white my-1">What are you doing</p>
+                                        <span class="badge badge-pill badge-danger"
+                                            style="float: right;min-width: 50px;">new</span>
+                                        <p class="text-white my-1">@user_id</p>
                                     </div>
                                 </div>
                             </a>
@@ -85,7 +117,9 @@
                                         style="width: 75px;height: 75px; border: 2px solid white;">
                                     <div class="media-body mx-2">
                                         <h6 class="text-white my-2 font-weight-bold">Muhammadh</h6>
-                                        <p class="text-white my-1">What are you doing</p>
+                                        <span class="badge badge-pill badge-danger"
+                                            style="float: right;min-width: 50px;">new</span>
+                                        <p class="text-white my-1">@user_id</p>
                                     </div>
                                 </div>
                             </a>
@@ -99,7 +133,9 @@
                                         style="width: 75px;height: 75px; border: 2px solid white;">
                                     <div class="media-body mx-2">
                                         <h6 class="text-white my-2 font-weight-bold">Muhammadh</h6>
-                                        <p class="text-white my-1">What are you doing</p>
+                                        <span class="badge badge-pill badge-danger"
+                                            style="float: right;min-width: 50px;">new</span>
+                                        <p class="text-white my-1">@user_id</p>
                                     </div>
                                 </div>
                             </a>
@@ -113,7 +149,9 @@
                                         style="width: 75px;height: 75px; border: 2px solid white;">
                                     <div class="media-body mx-2">
                                         <h6 class="text-white my-2 font-weight-bold">Muhammadh</h6>
-                                        <p class="text-white my-1">What are you doing</p>
+                                        <span class="badge badge-pill badge-danger"
+                                            style="float: right;min-width: 50px;">new</span>
+                                        <p class="text-white my-1">@user_id</p>
                                     </div>
                                 </div>
                             </a>
@@ -127,12 +165,47 @@
                                         style="width: 75px;height: 75px; border: 2px solid white;">
                                     <div class="media-body mx-2">
                                         <h6 class="text-white my-2 font-weight-bold">Muhammadh</h6>
-                                        <p class="text-white my-1">What are you doing</p>
+                                        <span class="badge badge-pill badge-danger"
+                                            style="float: right;min-width: 50px;">new</span>
+                                        <p class="text-white my-1">@user_id</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="dropdown-divider m-0"></div>
+
+                            <!-- People List 7 -->
+                            <a href="#" class="nav-link p-0">
+                                <div class="media mb-0 p-1 bg-info">
+                                    <img src="https://hk-23.github.io/sample/female-profile.png"
+                                        class="rounded-circle bg-white" id="img-mentor"
+                                        style="width: 75px;height: 75px; border: 2px solid white;">
+                                    <div class="media-body mx-2">
+                                        <h6 class="text-white my-2 font-weight-bold">Muhammadh</h6>
+                                        <span class="badge badge-pill badge-danger"
+                                            style="float: right;min-width: 50px;">new</span>
+                                        <p class="text-white my-1">@user_id</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="dropdown-divider m-0"></div>
+
+                            <!-- People List 8 -->
+                            <a href="#" class="nav-link p-0">
+                                <div class="media mb-0 p-1 bg-info">
+                                    <img src="https://hk-23.github.io/sample/male-profile.png"
+                                        class="rounded-circle bg-white" id="img-mentor"
+                                        style="width: 75px;height: 75px; border: 2px solid white;">
+                                    <div class="media-body mx-2">
+                                        <h6 class="text-white my-2 font-weight-bold">Muhammadh</h6>
+                                        <span class="badge badge-pill badge-danger"
+                                            style="float: right;min-width: 50px;">new</span>
+                                        <p class="text-white my-1">@user_id</p>
                                     </div>
                                 </div>
                             </a>
                             <div class="dropdown-divider m-0"></div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -153,13 +226,23 @@
 
                         <!-- Header -->
                         <div class="card-header">
-                            <h4 class="card-title"><strong>Muhammadh Kamaruddheen</strong></h4>
-                        </div>
+                            <div class="media mb-0 p-0">
+                                <img src="https://hk-23.github.io/sample/female-profile.png"
+                                    class="rounded-circle bg-white" id="img-mentor"
+                                    style="width: 40px;height: 40px; border: 1px solid white;">
 
+                                <h4 class="card-title mb-0 mt-1 mx-2"><strong>Muhammadh Kamaruddheen</strong></h4>
+                            </div>
+                        </div>
                         <!-- User Message -->
                         <div class="container p-0 bg-white" id="chat" style="overflow-y: scroll !important;">
 
-
+                            <div class="container justify-content-center p-0" style="height: 20px;">
+                                <div class="p-0 justify-content-center d-flex rounded-pill"
+                                    style="background-color: #afafaf41!important;">
+                                    <label class="btn badge badge-pill badge-light  mb-0">Unread Messages</label>
+                                </div>
+                            </div>
 
                         </div>
 
@@ -169,7 +252,7 @@
                                 aria-label="message-mentor" aria-describedby="send-icon-mentor"
                                 id="sending-message-mentor">
                             <div class="input-group-prepend mr-0">
-                                <button class="input-group-text rounded-custom-right" id="send-icon-mentor"><i
+                                <button class="input-group-text rounded-custom-right bg-white" id="send-icon-mentor"><i
                                         class="fas fa-paper-plane"></i></button>
                             </div>
                         </div>
@@ -186,9 +269,8 @@
     <script>
 
         $(document).ready(function () {
-
             $('#chat').scrollTop($(document).height());
-            $("chat").removeClass("scroll-beh");    // removing scroll to bottom for each message
+            $("#chat").removeClass("scroll-beh");    // removing scroll to bottom for each message
 
             $("#send-icon-mentor").click(function () {
                 var now = new Date();
@@ -215,7 +297,7 @@
                     var y = elmnt.scrollHeight;
                     $('#chat').scrollTop(y - h);
 
-                    $("#sending-message-mentor").val('');   // empty input box after sending message
+                    $("#sending-message-mentor").val('').focus();   // empty input box after sending message
                 }
             })
 
@@ -248,43 +330,12 @@
                         var y = elmnt.scrollHeight;
                         $('#chat').scrollTop(y - h);
 
-                        $("#sending-message-mentor").val('');   // empty input box after sending message
+                        $("#sending-message-mentor").val('').focus();   // empty input box after sending message
                     }
                 }
             });
 
         });
-
-        //$(window).width() >= 576 && $(window).width() < 700 || 
-
-        $(window).resize(function () {
-            if ($(window).width() <= 767) {
-                $("#chat").css("height", $(window).height() - 183);
-                $("#sidebar").addClass("sidebar animate__animated animate__slideInLeft");
-                $("#sidebar_close_top").css("display", "flex");
-
-                $('#goo').click(function () {
-                    $('#sidebar').css("display", "block");
-                    $('#sidebar').removeClass("animate__slideOutLeft");
-                    $('#sidebar').addClass("animate__slideInLeft");
-                    $('#overlay').css("display", "block");
-                });
-
-                $('#sidebar_close,#overlay').click(function () {
-                    $('#sidebar').removeClass("animate__slideInLeft");
-                    $('#sidebar').addClass("animate__slideOutLeft");
-                    $('#overlay').css("display", "none");
-                });
-            }
-            else {
-
-                $('#overlay').css("display", "none");
-                $("#sidebar").removeClass("sidebar animate__animated animate__slideInLeft");
-                $("#sidebar_close_top").css("display", "none");
-
-            }
-        });
-
 
     </script>
 </body>
