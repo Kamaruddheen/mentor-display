@@ -54,6 +54,9 @@ body {
     background-color: transparent!important;
   }
 
+  .mx-w{
+    max-width: 100%;
+  }
   .media-meta-day {
     -webkit-box-pack: justify;
     justify-content: space-between;

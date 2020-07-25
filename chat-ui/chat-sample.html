@@ -271,6 +271,7 @@
             $('#chat').scrollTop($(document).height());
             $("#chat").removeClass("scroll-beh");    // removing scroll to bottom for each message
 
+            //  while pressing send button
             $("#send-icon-mentor").click(function () {
                 var now = new Date();
 
@@ -285,7 +286,7 @@
                 if (msg_mentor != "") {
                     var styled_msg_time = $("<p></p>").text(time).addClass("user2_meta order-2 d-flex justify-content-end p-0 m-0");
                     var styled_msg = $("<p></p>").text(msg_mentor).addClass("user2 order-1").append(styled_msg_time);
-                    var media_body_msg = $("<div></div>").addClass("media-body mx-2").append(styled_msg);
+                    var media_body_msg = $("<div></div>").addClass("media-body mx-2 mx-w").append(styled_msg);
                     var media_msg = $("<div></div>").addClass("media mb-0 mx-2 p-2").append(media_body_msg);
 
                     $("#chat").append(media_msg);    // message style for me
@@ -318,7 +319,7 @@
 
                         var styled_msg_time = $("<p></p>").text(time).addClass("user1_meta order-2 d-flex justify-content-end p-0 m-0");
                         var styled_msg = $("<p></p>").text(msg_mentor).addClass("user1 order-1").append(styled_msg_time);
-                        var media_body_msg = $("<div></div>").addClass("media-body mx-2").append(styled_msg);
+                        var media_body_msg = $("<div></div>").addClass("media-body mx-2 mx-w").append(styled_msg);
                         var media_msg = $("<div></div>").addClass("media mb-0 mx-2 p-2").append(media_body_msg);
 
                         var unread_msg_user1 = $("<label></label>").addClass("btn badge badge-pill badge-light mb-0").text("Unread Messages");
