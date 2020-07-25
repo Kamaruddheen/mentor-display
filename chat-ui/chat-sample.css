@@ -12,6 +12,7 @@ body {
     margin: 4px 0px;
     float: left;
     clear: left;
+    max-width: 75%;
   }
 
   .user1_meta  {
@@ -29,6 +30,7 @@ body {
     margin: 4px 0px;
     float: right;
     clear: right;
+    max-width: 75%;
   }
 
   .user2_meta  {
