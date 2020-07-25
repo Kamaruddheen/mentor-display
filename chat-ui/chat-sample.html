@@ -13,7 +13,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-
+    <!-- animate css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
     <link rel="stylesheet" href="chat-sample.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
@@ -21,14 +22,13 @@
 
 <body>
 
-    <div class="container shadow-lg">
+    <div class="container-fluid shadow-lg " id="main_container">
         <div class="row">
-
             <!--people list view column 4 -->
-            <div class="col-md-4 col-lg-4 px-0">
-                <div class="container justify-content-center p-0">
+            <div class="col-md-4 col-lg-4 px-0" style="height:100vh;">
+                <div class="container justify-content-center p-0 m-0">
                     <!--People list card-->
-                    <div class="card">
+                    <div class="card rounded-0">
 
                         <!-- Header -->
                         <div class="card-header">
@@ -37,7 +37,7 @@
 
                         <!-- People List Container -->
                         <div class="container p-0 bg-info scroll-beh" id="chat-content"
-                            style="overflow-y: scroll !important; height:500px !important;">
+                            style="overflow-y: scroll !important;">
 
                             <div class="input-group p-1">
                                 <input type="text" class="form-control rounded-custom-left" placeholder="Search"
@@ -49,9 +49,8 @@
                             </div>
                             <div class="dropdown-divider m-0"></div>
 
-
                             <!-- People List 1 -->
-                            <a href="" class="nav-link p-0">
+                            <a href="#" id="goo" class="nav-link p-0">
                                 <div class="media mb-0 p-1 bg-info">
                                     <img src="https://hk-23.github.io/sample/female-profile.png"
                                         class="rounded-circle bg-white" id="img-mentor"
@@ -65,7 +64,7 @@
                             <div class="dropdown-divider m-0"></div>
 
                             <!-- People List 1 -->
-                            <a href="" class="nav-link p-0">
+                            <a href="#" class="nav-link p-0">
                                 <div class="media mb-0 p-1 bg-info">
                                     <img src="https://hk-23.github.io/sample/male-profile.png"
                                         class="rounded-circle bg-white" id="img-mentor"
@@ -79,7 +78,7 @@
                             <div class="dropdown-divider m-0"></div>
 
                             <!-- People List 3 -->
-                            <a href="" class="nav-link p-0">
+                            <a href="#" class="nav-link p-0">
                                 <div class="media mb-0 p-1 bg-info">
                                     <img src="https://hk-23.github.io/sample/female-profile.png"
                                         class="rounded-circle bg-white" id="img-mentor"
@@ -93,7 +92,7 @@
                             <div class="dropdown-divider m-0"></div>
 
                             <!-- People List 4 -->
-                            <a href="" class="nav-link p-0">
+                            <a href="#" class="nav-link p-0">
                                 <div class="media mb-0 p-1 bg-info">
                                     <img src="https://hk-23.github.io/sample/male-profile.png"
                                         class="rounded-circle bg-white" id="img-mentor"
@@ -107,7 +106,7 @@
                             <div class="dropdown-divider m-0"></div>
 
                             <!-- People List 5 -->
-                            <a href="" class="nav-link p-0">
+                            <a href="#" class="nav-link p-0">
                                 <div class="media mb-0 p-1 bg-info">
                                     <img src="https://hk-23.github.io/sample/female-profile.png"
                                         class="rounded-circle bg-white" id="img-mentor"
@@ -121,7 +120,7 @@
                             <div class="dropdown-divider m-0"></div>
 
                             <!-- People List 6 -->
-                            <a href="" class="nav-link p-0">
+                            <a href="#" class="nav-link p-0">
                                 <div class="media mb-0 p-1 bg-info">
                                     <img src="https://hk-23.github.io/sample/male-profile.png"
                                         class="rounded-circle bg-white" id="img-mentor"
@@ -138,22 +137,29 @@
                 </div>
             </div>
 
-            <!-- Message Box -->
-            <div class="col-md-8 col-lg-8 px-0">
-                <div class="container justify-content-center p-0">
-                    <div class="card card-bordered">
+            <div id="sidebar" class=".d-none col-sm-none col-md-8 col-lg-8 px-0">
+                <div class="container justify-content-center p-0 m-0">
+
+                    <div class="card rounded-0">
+
+                        <div class="list-group list-group-flush text-center" id="sidebar_close_top"
+                            style="display:none">
+                            <li class="p-2 list-group-item">
+                                <span id="sidebar_close" class="float-right">
+                                    <a href="#"><i class="fas fa-times fa-lg" style="color: #f06595;"></i></a>
+                                </span>
+                            </li>
+                        </div>
+
                         <!-- Header -->
                         <div class="card-header">
                             <h4 class="card-title"><strong>Muhammadh Kamaruddheen</strong></h4>
                         </div>
 
                         <!-- User Message -->
-                        <div class="container p-0 bg-white" id="chat"
-                            style="overflow-y: scroll !important; height: 454px;">
+                        <div class="container p-0 bg-white" id="chat" style="overflow-y: scroll !important;">
 
-                            <div class="container">
-                                
-                            </div>
+
 
                         </div>
 
@@ -170,6 +176,9 @@
 
                     </div>
                 </div>
+            </div>
+
+            <div class="overlay" id="overlay" style="display: none;">
             </div>
         </div>
     </div>
@@ -245,6 +254,37 @@
             });
 
         });
+
+        //$(window).width() >= 576 && $(window).width() < 700 || 
+
+        $(window).resize(function () {
+            if ($(window).width() <= 767) {
+                $("#chat").css("height", $(window).height() - 183);
+                $("#sidebar").addClass("sidebar animate__animated animate__slideInLeft");
+                $("#sidebar_close_top").css("display", "flex");
+
+                $('#goo').click(function () {
+                    $('#sidebar').css("display", "block");
+                    $('#sidebar').removeClass("animate__slideOutLeft");
+                    $('#sidebar').addClass("animate__slideInLeft");
+                    $('#overlay').css("display", "block");
+                });
+
+                $('#sidebar_close,#overlay').click(function () {
+                    $('#sidebar').removeClass("animate__slideInLeft");
+                    $('#sidebar').addClass("animate__slideOutLeft");
+                    $('#overlay').css("display", "none");
+                });
+            }
+            else {
+
+                $('#overlay').css("display", "none");
+                $("#sidebar").removeClass("sidebar animate__animated animate__slideInLeft");
+                $("#sidebar_close_top").css("display", "none");
+
+            }
+        });
+
 
     </script>
 </body>
