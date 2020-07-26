@@ -3,60 +3,41 @@ body {
     height: 100vh;
   }
 
-  .card{
+  .card, .row, .container, .container-fluid{
     height:100vh;
   }
 
-  .row{
-    height:100vh;
-  }
-  .container{
-    height:100vh;
-  }
-
-  .container-fluid{
-    height:100vh;
-  }
-
-  .user1 {
+  .user1, .user2 {
     padding: .25rem .5rem;
     font-size: 16.5px;
     line-height: 1.5;
     border-radius: .2rem;
-    background-color: #f5f6f7!important;
     color: #343a40!important;
     margin: 4px 0px;
-    float: left;
-    clear: left;
     max-width: 75%;
   }
 
-  .user1_meta  {
-    font-size: 12px;
-    background-color: transparent!important;
+  .user1{
+    background-color: #f5f6f7!important;
+    float: left;
+    clear: left;
   }
 
   .user2 {
-    padding: .25rem .5rem;
-    font-size: 16.5px;
-    line-height: 1.5;
-    border-radius: .2rem;
     background-color: #92E1E2!important;
-    color: #343a40!important;
-    margin: 4px 0px;
     float: right;
     clear: right;
-    max-width: 75%;
   }
 
-  .user2_meta  {
+  .user1_meta, .user2_meta {
     font-size: 12px;
     background-color: transparent!important;
-  }
+  }  
 
   .mx-w{
     max-width: 100%;
   }
+
   .media-meta-day {
     -webkit-box-pack: justify;
     justify-content: space-between;
@@ -103,13 +84,7 @@ body {
     border-left: 0px;    
   }
 
-  .rounded-custom-right:focus{  
-    outline: none !important;
-    box-shadow: none;
-    border-color: #ced4da;
-  }
-
-  .rounded-custom-left:focus{  
+  .rounded-custom-right:focus, .rounded-custom-left:focus {
     outline: none !important;
     box-shadow: none;
     border-color: #ced4da;
