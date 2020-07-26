@@ -104,7 +104,15 @@ body {
   }
 
   .rounded-custom-right:focus{  
-    outline: none !important;  
+    outline: none !important;
+    box-shadow: none;
+    border-color: #ced4da;
+  }
+
+  .rounded-custom-left:focus{  
+    outline: none !important;
+    box-shadow: none;
+    border-color: #ced4da;
   }
 
   .scroll-beh{
