@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Weekly Feedback Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- animate css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <!-- Custom css -->
+    <link rel="stylesheet" href="weekly_feedback.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <button type="button" class="btn btn-primary" id="feedback-mentee">Feedback Form</button>
+        <form action="#" method="" novalidate>
+            <div class="modal fade" id="mymodal-feedback-mentee">
+                <div class="modal-dialog justify-content-center d-flex">
+                    <div class="modal-content">
+                        <div class="modal-body p-0" id="form-mentor">
+
+                            <div class="card">
+                                <div class="card-header text-center">
+                                    <h4>Send us your Feedback!</h4>
+                                    <h6 class="text-muted">Do you have any suggestion<br>Let us know in the field below
+                                    </h6>
+                                </div>
+                                <div class="card-body">
+
+                                    <div class="form-group">
+                                        <label for="exampleFormControlTextarea1">Feedback:
+                                            <span class="text-muted">(optional)</span></label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
+                                            placeholder="Leave your feedback..."></textarea>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="row m-0">
+                                            <label for="exampleFormControlTextarea2">Rate your Mentor<span
+                                                    class="text-danger">*</span></label>
+                                        </div>
+                                        <div class="row m-0 rate mb-3">
+                                            <i type="button" class="fas fa-star px-1" id="star1"></i>
+                                            <i type="button" class="fas fa-star px-1" id="star2"></i>
+                                            <i type="button" class="fas fa-star px-1" id="star3"></i>
+                                            <i type="button" class="fas fa-star px-1" id="star4"></i>
+                                            <i type="button" class="fas fa-star px-1" id="star5"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group mt-4 mb-0">
+                                        <button type="submit" class="btn btn-primary w-100 my-1">Send Feedback</button>
+                                        <button type="reset" class="btn btn-warning w-100 my-1"
+                                            id="cancel-feedback-mentee">Cancel</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#feedback-mentee").click(function () {
+                $("#mymodal-feedback-mentee").modal("show");
+            })
+            $("#cancel-feedback-mentee").click(function () {
+                $("#mymodal-feedback-mentee").modal("hide");
+            })
+        });
+    </script>
+</body>

@@ -1,0 +1,14 @@
+.rate{
+    direction: rtl;
+    float: left;
+    color: grey;
+}
+
+.rate > i{
+    display: inline-block;
+    position: relative;
+}
+
+.rate > i:hover:before,.rate > i:hover ~ i:before {
+    color: gold;
+}

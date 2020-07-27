@@ -18,7 +18,6 @@
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <!-- Custom css -->
     <link rel="stylesheet" href="chat.css">
-    
     <script>
         $(window).resize(function () {
             if ($(window).width() <= 767) {
@@ -79,7 +78,7 @@
                             <div class="dropdown-divider m-0"></div>
 
                             <!-- People List 1 -->
-                            <a href="#" id="goo" class="nav-link p-0">
+                            <div href="#" id="goo" class="nav-link p-0">
                                 <div class="media mb-0 p-1 bg-info">
                                     <img src="https://hk-23.github.io/sample/female-profile.png"
                                         class="rounded-circle bg-white" id="img-mentor"
@@ -91,11 +90,11 @@
                                         <p class="text-white my-1">@user_id</p>
                                     </div>
                                 </div>
-                            </a>
+                            </div>
                             <div class="dropdown-divider m-0"></div>
 
                             <!-- People List 1 -->
-                            <a href="#" class="nav-link p-0">
+                            <div href="#" class="nav-link p-0">
                                 <div class="media mb-0 p-1 bg-info">
                                     <img src="https://hk-23.github.io/sample/male-profile.png"
                                         class="rounded-circle bg-white" id="img-mentor"
@@ -107,11 +106,11 @@
                                         <p class="text-white my-1">@user_id</p>
                                     </div>
                                 </div>
-                            </a>
+                            </div>
                             <div class="dropdown-divider m-0"></div>
 
                             <!-- People List 3 -->
-                            <a href="#" class="nav-link p-0">
+                            <div href="#" class="nav-link p-0">
                                 <div class="media mb-0 p-1 bg-info">
                                     <img src="https://hk-23.github.io/sample/female-profile.png"
                                         class="rounded-circle bg-white" id="img-mentor"
@@ -123,11 +122,11 @@
                                         <p class="text-white my-1">@user_id</p>
                                     </div>
                                 </div>
-                            </a>
+                            </div>
                             <div class="dropdown-divider m-0"></div>
 
                             <!-- People List 4 -->
-                            <a href="#" class="nav-link p-0">
+                            <div href="#" class="nav-link p-0">
                                 <div class="media mb-0 p-1 bg-info">
                                     <img src="https://hk-23.github.io/sample/male-profile.png"
                                         class="rounded-circle bg-white" id="img-mentor"
@@ -139,11 +138,11 @@
                                         <p class="text-white my-1">@user_id</p>
                                     </div>
                                 </div>
-                            </a>
+                            </div>
                             <div class="dropdown-divider m-0"></div>
 
                             <!-- People List 5 -->
-                            <a href="#" class="nav-link p-0">
+                            <div href="#" class="nav-link p-0">
                                 <div class="media mb-0 p-1 bg-info">
                                     <img src="https://hk-23.github.io/sample/female-profile.png"
                                         class="rounded-circle bg-white" id="img-mentor"
@@ -155,11 +154,11 @@
                                         <p class="text-white my-1">@user_id</p>
                                     </div>
                                 </div>
-                            </a>
+                            </div>
                             <div class="dropdown-divider m-0"></div>
 
                             <!-- People List 6 -->
-                            <a href="#" class="nav-link p-0">
+                            <div href="#" class="nav-link p-0">
                                 <div class="media mb-0 p-1 bg-info">
                                     <img src="https://hk-23.github.io/sample/male-profile.png"
                                         class="rounded-circle bg-white" id="img-mentor"
@@ -171,11 +170,11 @@
                                         <p class="text-white my-1">@user_id</p>
                                     </div>
                                 </div>
-                            </a>
+                            </div>
                             <div class="dropdown-divider m-0"></div>
 
                             <!-- People List 7 -->
-                            <a href="#" class="nav-link p-0">
+                            <div href="#" class="nav-link p-0">
                                 <div class="media mb-0 p-1 bg-info">
                                     <img src="https://hk-23.github.io/sample/female-profile.png"
                                         class="rounded-circle bg-white" id="img-mentor"
@@ -187,11 +186,11 @@
                                         <p class="text-white my-1">@user_id</p>
                                     </div>
                                 </div>
-                            </a>
+                            </div>
                             <div class="dropdown-divider m-0"></div>
 
                             <!-- People List 8 -->
-                            <a href="#" class="nav-link p-0">
+                            <div href="#" class="nav-link p-0">
                                 <div class="media mb-0 p-1 bg-info">
                                     <img src="https://hk-23.github.io/sample/male-profile.png"
                                         class="rounded-circle bg-white" id="img-mentor"
@@ -203,7 +202,7 @@
                                         <p class="text-white my-1">@user_id</p>
                                     </div>
                                 </div>
-                            </a>
+                            </div>
                             <div class="dropdown-divider m-0"></div>
                         </div>
 
@@ -214,7 +213,7 @@
             <div id="sidebar" class=".d-none col-sm-none col-md-8 col-lg-8 px-0">
                 <div class="container justify-content-center p-0 m-0">
 
-                    <div class="card rounded-0">
+                    <div class="card rounded-0" style="display: none;" id="chat-message-view">
 
                         <div class="list-group list-group-flush text-center" id="sidebar_close_top"
                             style="display:none">
@@ -262,6 +261,17 @@
     <script>
 
         $(document).ready(function () {
+
+            // for getting the chat hitory
+            $('#chat').bind('scroll', function () {
+
+                // scrolltop value is 0 means it reaches to top
+                if ($(this).scrollTop() == 0) {
+                    //alert("Nice to be in top")
+                }
+
+            })
+
             $('#chat').scrollTop($(document).height());
             $("#chat").removeClass("scroll-beh");    // removing scroll to bottom for each message
 
@@ -316,6 +326,7 @@
                         var media_body_msg = $("<div></div>").addClass("media-body mx-2 mx-w").append(styled_msg);
                         var media_msg = $("<div></div>").addClass("media mb-0 mx-2 p-2").append(media_body_msg);
 
+                        // unread msg display
                         var unread_msg_user1 = $("<label></label>").addClass("btn badge badge-pill badge-light mb-0").text("Unread Messages");
                         var div_msg_user1 = $("<div></div>").addClass("p-0 justify-content-center d-flex rounded-pill bg-cust").append(unread_msg_user1);
                         var container_msg_user1 = $("<div></div>").addClass("container justify-content-center p-0 cont-h").append(div_msg_user1).attr('id', '1');
