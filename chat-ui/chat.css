@@ -1,6 +1,5 @@
 body {
-    background-color: #f9f9fa;
-    height: 100vh;
+  background-color: rgba(7, 3, 255, 0.096);    
   }
 
   .card, .row, .container, .container-fluid{
@@ -123,3 +122,13 @@ body {
   .bg-cust{
     background-color: #afafaf41;
   }
+  
+  .unstyled-link {
+    color:inherit;
+  }
+  
+  .unstyled-link:hover {
+    text-decoration: none;
+    color:inherit;
+  }
+  
