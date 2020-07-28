@@ -1,0 +1,8 @@
+.unstyled-link {
+	color:inherit;
+}
+
+.unstyled-link:hover {
+	text-decoration: none;
+	color:inherit;
+}
