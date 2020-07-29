@@ -21,9 +21,9 @@
 </head>
 
 <body>
-    <div class="container-fluid p-0" id="main_container">
+    <div class="container-fluid p-0" id="chat_container">
         <div class="row m-0">
-            <div class="card rounded-0 w-100" id="chat-message-view">
+            <div class="card rounded-0 w-100">
 
                 <div class="list-group list-group-flush text-center" id="sidebar_close_top">
                     <li class="p-2 list-group-item">
@@ -46,6 +46,7 @@
 
                 <!-- User Message -->
                 <div class="container-fluid p-0 bg-white" id="chat" style="overflow-y: scroll !important;">
+
                     <!-- Dynamic message system -->
                     <div class="media mb-0 mx-2 p-2">
                         <div class="media-body mx-2 mx-w">
@@ -56,7 +57,7 @@
                         </div>
                     </div>
 
-                    <div class="container justify-content-center p-0 cont-h">
+                    <div class="cont-h justify-content-center p-0">
                         <div class="p-0 justify-content-center d-flex rounded-pill bg-cust">
                             <label class="btn badge badge-pill badge-light mb-0">Unread Messages</label>
                         </div>
@@ -82,7 +83,7 @@
                         </div>
                     </div>
 
-                    <div class="container justify-content-center p-0 cont-h">
+                    <div class="cont-h justify-content-center p-0">
                         <div class="p-0 justify-content-center d-flex rounded-pill bg-cust">
                             <label class="btn badge badge-pill badge-light mb-0">Unread Messages</label>
                         </div>
@@ -108,42 +109,18 @@
                                 class="fas fa-paper-plane"></i></button>
                     </div>
                 </div>
-
             </div>
         </div>
-    </div>
 
-    <script>
+        <script>
 
-        $(document).ready(function () {
+            $(document).ready(function () {
 
-            $('#chat').scrollTop($(document).height()); // By default chat scroll will be at bottom
-            //$("#chat").removeClass("scroll-beh");    // removing scroll to bottom for each message
+                $('#chat').scrollTop($(document).height()); // By default chat scroll will be at bottom
+                //$("#chat").removeClass("scroll-beh");    // removing scroll to bottom for each message
 
-            //  while pressing send button
-            $("#send-icon-mentor").click(function () {
-
-                // input box value
-                var msg_mentor = $("#sending-message-mentor").val();
-
-                if (msg_mentor != "") {
-
-                    // scrollTop = scrollHeight - clientHeight
-                    var h = document.getElementById("chat").clientHeight;
-                    var elmnt = document.getElementById("chat");
-                    var y = elmnt.scrollHeight;
-
-                    $('#chat').scrollTop(y - h);
-
-                    $("#sending-message-mentor").val('').focus();   // empty input box after sending message
-                }
-            })
-
-            // while pressing enter key (key no. - 13)
-            $("#sending-message-mentor").on("keypress", function (e) {
-
-                // enter key checking
-                if (e.keyCode == 13) {
+                //  while pressing send button
+                $("#send-icon-mentor").click(function () {
 
                     // input box value
                     var msg_mentor = $("#sending-message-mentor").val();
@@ -154,14 +131,36 @@
                         var h = document.getElementById("chat").clientHeight;
                         var elmnt = document.getElementById("chat");
                         var y = elmnt.scrollHeight;
+
                         $('#chat').scrollTop(y - h);
 
                         $("#sending-message-mentor").val('').focus();   // empty input box after sending message
                     }
-                }
+                })
+
+                // while pressing enter key (key no. - 13)
+                $("#sending-message-mentor").on("keypress", function (e) {
+
+                    // enter key checking
+                    if (e.keyCode == 13) {
+
+                        // input box value
+                        var msg_mentor = $("#sending-message-mentor").val();
+
+                        if (msg_mentor != "") {
+
+                            // scrollTop = scrollHeight - clientHeight
+                            var h = document.getElementById("chat").clientHeight;
+                            var elmnt = document.getElementById("chat");
+                            var y = elmnt.scrollHeight;
+                            $('#chat').scrollTop(y - h);
+
+                            $("#sending-message-mentor").val('').focus();   // empty input box after sending message
+                        }
+                    }
+                });
+
             });
 
-        });
-
-    </script>
+        </script>
 </body>

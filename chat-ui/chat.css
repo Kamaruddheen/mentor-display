@@ -2,7 +2,8 @@ body {
   background-color: rgba(7, 3, 255, 0.096);    
   }
 
-  .card, .row, .container, .container-fluid{
+  #chat_container .card, #chat_container .row,
+  #chat_container .container-fluid{
     height:100vh;
   }
 
