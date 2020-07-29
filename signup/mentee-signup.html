@@ -2,198 +2,184 @@
 <html>
 
 <body>
-	<div>
+	<div class="container">
 		<form action="#" method="" onreset="myfunction()" novalidate>
 			<!-- why inside form modals? Because incase if i want to add another modals in future both modals should be worked as independent.For that modals are inside the forms-->
-			<div class="modal fade " id="mymodal-mentee" style="overflow:scroll">
-				<div class="modal-dialog modal-lg modal-md modal-sm">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h4>Signup as a Mentee</h4>
-							<button type="reset" id="exit-in-signup-mentee" class="close">&times;</button>
+			<div class="card p-0 d-flex flex-column align-items-center my-2" id="form-mentor">
+
+				<div class="row w-75 mb-4 mt-4 d-flex justify-content-around align-items-center">
+					<h2 class="card-title text-dark font-weight-bold">Signup as Mentee</h2>
+				</div>
+
+				<div class="row w-75 mb-4 mt-4">
+					<div class="col px-0">
+
+						<div class="d-flex align-items-center justify-content-around">
+
+							<img src="profile.png" class="rounded-circle bg-white" id="img-mentee"
+								style="width: 100px;height: 100px; border: 5px solid white;">
 						</div>
 
-						<div class="modal-body p-0 d-flex flex-column align-items-center" id="form-mentee">
+						<div class="d-flex align-items-center justify-content-around mt-4">
+							<div class="input-group w-100">
+								<div class="custom-file">
+									<input type="file" class="custom-file-input m-2" id="upload-mentee"
+										aria-describedby="inputGroupFileAddon01">
+									<label class="custom-file-label" for="upload-mentee">Choose
+									</label>
 
-							<div class="row w-75 mb-4 mt-4">
-								<div class="col px-0">
-
-									<div class="d-flex align-items-center justify-content-around">
-
-										<img src="profile.png" class="rounded-circle bg-white" id="img-mentee"
-											style="width: 100px;height: 100px; border: 5px solid white;">
-									</div>
-
-									<div class="d-flex align-items-center justify-content-around mt-4">
-										<div class="input-group w-100">
-											<div class="custom-file">
-												<input type="file" class="custom-file-input m-2" id="upload-mentee"
-													aria-describedby="inputGroupFileAddon01">
-												<label class="custom-file-label" for="upload-mentee">Choose
-												</label>
-
-											</div>
-											<div class="input-group-append">
-												<button class="btn btn-danger" type="button"
-													id="img-clear-mentee">Clear</button>
-											</div>
-										</div>
-									</div>
+								</div>
+								<div class="input-group-append">
+									<button class="btn btn-danger" type="button" id="img-clear-mentee">Clear</button>
 								</div>
 							</div>
-
-							<div class="row w-75">
-								<label for="name-mentee">Name <span>*</span></label>
-							</div>
-
-							<div class="row w-75 mb-4">
-								<div class="col-12 px-0 mb-2 col-md-6 pl-md-0 pr-md-3 mb-md-0">
-									<input type="text" placeholder="First Name" class="form-control" id="name-mentee">
-								</div>
-								<div class="col-12 px-0  col-md-6 pr-md-0 pl-md-3">
-									<input type="text" placeholder="Last Name" class="form-control">
-								</div>
-							</div>
-
-							<div class="row w-75 mb-4">
-
-								<div class="col-12 px-0 mb-4 col-md-6 pl-md-0 pr-md-3 mb-md-0">
-									<label for="dob-mentee">Date of Birth <span>*</span></label>
-									<input type="date" class="form-control" id="dob-mentee">
-								</div>
-
-								<div class="col-12 px-0 col-md-6 pr-md-0 pl-md-3">
-									<label for="gender-group-mentee" class="mb-2">Gender <span>*</span></label>
-									<div class="d-flex justify-content-around" id="gender-group-mentee">
-										<div class="custom-control custom-radio custom-control-inline">
-											<input type="radio" class="custom-control-input" name="gender-mentee"
-												id="male-mentee">
-											<label class="custom-control-label" for="male-mentee"
-												id="genderM-mentee">Male</label>
-										</div>
-										<div class="custom-control custom-radio custom-control-inline ">
-											<input class="custom-control-input" type="radio" name="gender-mentee"
-												id="female-mentee">
-											<label class="custom-control-label" for="female-mentee"
-												id="genderF-mentee">Female</label>
-										</div>
-										<div class="custom-control custom-radio custom-control-inline">
-											<input class="custom-control-input" type="radio" name="gender-mentee"
-												id="others-mentee">
-											<label class="custom-control-label" for="others-mentee"
-												id="genderO-mentee">Others</label>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="row w-75 mb-4">
-
-								<div class="col-12 px-0 mb-4 col-md-6 pl-md-0 pr-md-3 mb-md-0">
-									<label for="email-mentee">Email <span>*</span></label>
-									<input type="email" class="form-control" id="email-mentee"
-										placeholder="abc123@example.com">
-								</div>
-
-								<div class="col-12 px-0 col-md-6 pr-md-0 pl-md-3">
-									<label for="contact-mentee">Contact No. <span>*</span></label>
-									<input type="tel" id="contact-mentee" class="form-control"
-										placeholder="+91 1234567890" pattern="[0-9]{10}">
-								</div>
-							</div>
-
-							<div class="row w-75 mb-4">
-								<div class="col px-0">
-									<label for="username-mentee">User name <span>*</span> <i
-											id="username-tooltip-mentee" type="button" class="fas fa-info-circle"
-											data-toggle="tooltip" title="This is temporary"></i></label>
-									<div class="input-group">
-										<div class="input-group-prepend">
-											<span class="input-group-text" id="basic-addon1">@</span>
-										</div>
-										<input type="text" class="form-control" placeholder="Username"
-											aria-label="Username" aria-describedby="basic-addon1" id="username-mentee">
-									</div>
-								</div>
-							</div>
-
-							<div class="row w-75 mb-4">
-								<div class="col-12 px-0 mb-4 col-md-6 pl-md-0 pr-md-3 mb-md-0">
-									<label for="password-mentee">Password <span>*</span></label>
-									<div class="input-group">
-										<input type="password" class="form-control" id="password-mentee"
-											placeholder="Password">
-										<div class="input-group-append">
-											<div class="input-group-text">
-												<i class="fa fa-eye-slash" type="button" id="password-icon-mentee"></i>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div class="col-12 px-0 col-md-6 pr-md-0 pl-md-3">
-									<label for="confirm-mentee">Confirm Password <span>*</span></label>
-									<div class="input-group">
-										<input type="password" class="form-control" id="confirm-mentee"
-											placeholder="Confirm Password">
-										<div class="input-group-append">
-											<div class="input-group-text">
-												<i class="fa fa-eye-slash" type="button" id="confirm-icon-mentee"></i>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="row w-75 mb-4" id="field-row">
-
-								<div class="col-12 px-0 mb-4 col-md-6 pl-md-0 pr-md-3 mb-md-0">
-									<label for="field-mentee">Field <span>*</span></label>
-									<select class="custom-select field-reset" id="field-mentee">
-										<option></option>
-										<option>Agriculture</option>
-										<option>Computer</option>
-										<option>Others</option>
-									</select>
-								</div>
-
-								<div class="col-12 px-0 col-md-6 pr-md-0 pl-md-3">
-									<label for="subfield-mentee">Subfield <span>*</span></label>
-									<select class="custom-select field-reset" id="subfield-mentee">
-										<option></option>
-										<option>Front end</option>
-										<option>Back end</option>
-									</select>
-								</div>
-							</div>
-
-							<div class="row w-75 mb-1 startup-row">
-								<div class="input-group mb-3">
-									<div class="input-group-prepend">
-										<div class="col custom-control custom-checkbox">
-											<input type="checkbox" class="custom-control-input" id="startup-mentee">
-											<label for="startup-mentee" class="custom-control-label">Startup <i
-													id="startup-tooltip-mentee" type="button" class="fas fa-info-circle"
-													data-toggle="tooltip"
-													title="Check this if you have already started your Company or Business."></i></label>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="row w-75 mt-2 mb-3">
-								<div class="col d-flex justify-content-center justify-content-md-end">
-									<button type="reset" class="btn btn-warning rounded mr-2"
-										id="cancel-mentee">Cancel</button>
-									<button type="reset" class="btn btn-danger rounded mr-2"
-										id="reset-mentee">Reset</button>
-									<input type="submit" class="btn btn-success  rounded mr-2">
-								</div>
-							</div>
-
 						</div>
 					</div>
 				</div>
+
+				<div class="row w-75">
+					<label for="name-mentee">Name <span>*</span></label>
+				</div>
+
+				<div class="row w-75 mb-4">
+					<div class="col-12 px-0 mb-2 col-md-6 pl-md-0 pr-md-3 mb-md-0">
+						<input type="text" placeholder="First Name" class="form-control" id="name-mentee">
+					</div>
+					<div class="col-12 px-0  col-md-6 pr-md-0 pl-md-3">
+						<input type="text" placeholder="Last Name" class="form-control">
+					</div>
+				</div>
+
+				<div class="row w-75 mb-4">
+
+					<div class="col-12 px-0 mb-4 col-md-6 pl-md-0 pr-md-3 mb-md-0">
+						<label for="dob-mentee">Date of Birth <span>*</span></label>
+						<input type="date" class="form-control" id="dob-mentee">
+					</div>
+
+					<div class="col-12 px-0 col-md-6 pr-md-0 pl-md-3">
+						<label for="gender-group-mentee" class="mb-2">Gender <span>*</span></label>
+						<div class="d-flex justify-content-around" id="gender-group-mentee">
+							<div class="custom-control custom-radio custom-control-inline">
+								<input type="radio" class="custom-control-input" name="gender-mentee" id="male-mentee">
+								<label class="custom-control-label" for="male-mentee" id="genderM-mentee">Male</label>
+							</div>
+							<div class="custom-control custom-radio custom-control-inline ">
+								<input class="custom-control-input" type="radio" name="gender-mentee"
+									id="female-mentee">
+								<label class="custom-control-label" for="female-mentee"
+									id="genderF-mentee">Female</label>
+							</div>
+							<div class="custom-control custom-radio custom-control-inline">
+								<input class="custom-control-input" type="radio" name="gender-mentee"
+									id="others-mentee">
+								<label class="custom-control-label" for="others-mentee"
+									id="genderO-mentee">Others</label>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row w-75 mb-4">
+
+					<div class="col-12 px-0 mb-4 col-md-6 pl-md-0 pr-md-3 mb-md-0">
+						<label for="email-mentee">Email <span>*</span></label>
+						<input type="email" class="form-control" id="email-mentee" placeholder="abc123@example.com">
+					</div>
+
+					<div class="col-12 px-0 col-md-6 pr-md-0 pl-md-3">
+						<label for="contact-mentee">Contact No. <span>*</span></label>
+						<input type="tel" id="contact-mentee" class="form-control" placeholder="+91 1234567890"
+							pattern="[0-9]{10}">
+					</div>
+				</div>
+
+				<div class="row w-75 mb-4">
+					<div class="col px-0">
+						<label for="username-mentee">User name <span>*</span> <i id="username-tooltip-mentee"
+								type="button" class="fas fa-info-circle" data-toggle="tooltip"
+								title="This is temporary"></i></label>
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="basic-addon1">@</span>
+							</div>
+							<input type="text" class="form-control" placeholder="Username" aria-label="Username"
+								aria-describedby="basic-addon1" id="username-mentee">
+						</div>
+					</div>
+				</div>
+
+				<div class="row w-75 mb-4">
+					<div class="col-12 px-0 mb-4 col-md-6 pl-md-0 pr-md-3 mb-md-0">
+						<label for="password-mentee">Password <span>*</span></label>
+						<div class="input-group">
+							<input type="password" class="form-control" id="password-mentee" placeholder="Password">
+							<div class="input-group-append">
+								<div class="input-group-text">
+									<i class="fa fa-eye-slash" type="button" id="password-icon-mentee"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-12 px-0 col-md-6 pr-md-0 pl-md-3">
+						<label for="confirm-mentee">Confirm Password <span>*</span></label>
+						<div class="input-group">
+							<input type="password" class="form-control" id="confirm-mentee"
+								placeholder="Confirm Password">
+							<div class="input-group-append">
+								<div class="input-group-text">
+									<i class="fa fa-eye-slash" type="button" id="confirm-icon-mentee"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row w-75 mb-4" id="field-row">
+
+					<div class="col-12 px-0 mb-4 col-md-6 pl-md-0 pr-md-3 mb-md-0">
+						<label for="field-mentee">Field <span>*</span></label>
+						<select class="custom-select field-reset" id="field-mentee">
+							<option></option>
+							<option>Agriculture</option>
+							<option>Computer</option>
+							<option>Others</option>
+						</select>
+					</div>
+
+					<div class="col-12 px-0 col-md-6 pr-md-0 pl-md-3">
+						<label for="subfield-mentee">Subfield <span>*</span></label>
+						<select class="custom-select field-reset" id="subfield-mentee">
+							<option></option>
+							<option>Front end</option>
+							<option>Back end</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="row w-75 mb-1 startup-row">
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<div class="col custom-control custom-checkbox">
+								<input type="checkbox" class="custom-control-input" id="startup-mentee">
+								<label for="startup-mentee" class="custom-control-label">Startup <i
+										id="startup-tooltip-mentee" type="button" class="fas fa-info-circle"
+										data-toggle="tooltip"
+										title="Check this if you have already started your Company or Business."></i></label>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row w-75 mt-2 mb-3">
+					<div class="col d-flex justify-content-center justify-content-md-end">
+						<button type="reset" class="btn btn-warning rounded mr-2" id="cancel-mentee">Cancel</button>
+						<button type="reset" class="btn btn-danger rounded mr-2" id="reset-mentee">Reset</button>
+						<input type="submit" class="btn btn-success  rounded mr-2">
+					</div>
+				</div>
+
 			</div>
 		</form>
 	</div>
@@ -201,22 +187,13 @@
 	<script>
 		$(document).ready(function () {
 
-			$("#signup-mentee").click(function () {
-				$("#mymodal-mentee").modal("show");
-			});
-
 			$("#cancel-mentee").click(function () {
-				$("#mymodal-mentee").modal("hide");
 				$('#img-mentee').attr('src', "profile.png");
 			});
 
 			$("#reset-mentee").click(function () {
 				$('#img-mentee').attr('src', "profile.png");
 			})
-
-			$("#exit-in-signup-mentee").click(function () {
-				$("#mymodal-mentee").modal("hide");
-			});
 
 			$("#password-icon-mentee").click(function () {
 				$(this).toggleClass(" fa-eye fa-eye-slash");

@@ -2,241 +2,224 @@
 <html>
 
 <body>
-	<div>
+	<div class="container">
 		<form action="#" method="" novalidate>
-			<!--why inside form modals? Because incase if i want to add another modals in future both modals should be worked as independent.For that modals are inside the forms-->
-			<div class="modal fade" id="mymodal-mentor" style="overflow:scroll">
-				<div class="modal-dialog modal-lg modal-md modal-sm">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h4>Signup as a Mentor</h4>
-							<button type="reset" id="exit-in-signup-mentor" class="close">&times;</button>
+			<div class="card p-0 d-flex flex-column align-items-center my-2" id="form-mentor">
+
+				<div class="row w-75 mb-4 mt-4 d-flex justify-content-around align-items-center">
+					<h2 class="card-title text-dark font-weight-bold">Signup as Mentor</h2>
+				</div>
+
+				<div class="row w-75 mb-4">
+					<div class="col px-0">
+
+						<div class="d-flex align-items-center justify-content-around">
+							<img src="profile.png" class="rounded-circle bg-white" id="img-mentor"
+								style="width: 100px;height: 100px; border: 5px solid white;">
 						</div>
 
-						<div class="modal-body p-0 d-flex flex-column align-items-center" id="form-mentor">
-
-							<div class="row w-75 mb-4 mt-4">
-								<div class="col px-0">
-
-									<div class="d-flex align-items-center justify-content-around">
-										<img src="profile.png" class="rounded-circle bg-white" id="img-mentor"
-											style="width: 100px;height: 100px; border: 5px solid white;">
-									</div>
-
-									<div class="d-flex align-items-center justify-content-around mt-4">
-										<div class="input-group w-100">
-											<div class="custom-file">
-												<input type="file" class="custom-file-input m-2" id="upload-mentor"
-													aria-describedby="inputGroupFileAddon01">
-												<label class="custom-file-label" for="upload-mentee">Choose
-												</label>
-
-											</div>
-											<div class="input-group-append">
-												<button class="btn btn-danger" type="button"
-													id="img-clear-mentor">Clear</button>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="row w-75">
-								<label for="name-mentor">Name <span>*</span></label>
-							</div>
-
-							<div class="row w-75 mb-4">
-								<div class="col-12 px-0 mb-2 col-md-6 pl-md-0 pr-md-3 mb-md-0">
-									<input type="text" placeholder="First Name" class="form-control" id="name-mentor">
-								</div>
-								<div class="col-12 px-0  col-md-6 pr-md-0 pl-md-3">
-									<input type="text" placeholder="Last Name" class="form-control">
-								</div>
-							</div>
-
-							<div class="row w-75 mb-4">
-								<div class="col px-0">
-									<label for="shortbio-mentor">Short Bio <span>*</span> <i
-											id="shortbio-tooltip-mentor" type="button" class="fas fa-info-circle"
-											data-toggle="tooltip" data-placement="right"
-											title="Minimun 30 and Maximum 80 letter"></i></label>
-									<input type="text" rows="3" minlength="30" maxlength="80" class="form-control"
-										id="shortbio-mentor" />
-								</div>
-							</div>
-
-							<div class="row w-75 mb-4">
-
-								<div class="col-12 px-0 mb-4 col-md-6 pl-md-0 pr-md-3 mb-md-0">
-									<label for="dob-mentor">Date of Birth <span>*</span></label>
-									<input type="date" class="form-control" id="dob-mentor">
-								</div>
-
-								<div class="col-12 px-0 col-md-6 pr-md-0 pl-md-3">
-									<label for="gender-group-mentor" class="mb-2">Gender <span>*</span></label>
-									<div class="d-flex justify-content-around" id="gender-group-mentor">
-										<div class="custom-control custom-radio custom-control-inline">
-											<input type="radio" class="custom-control-input" name="gender-mentor"
-												id="male-mentor">
-											<label class="custom-control-label" for="male-mentor"
-												id="genderM-mentor">Male</label>
-										</div>
-										<div class="custom-control custom-radio custom-control-inline ">
-											<input class="custom-control-input" type="radio" name="gender-mentor"
-												id="female-mentor">
-											<label class="custom-control-label" for="female-mentor"
-												id="genderF-mentor">Female</label>
-										</div>
-										<div class="custom-control custom-radio custom-control-inline">
-											<input class="custom-control-input" type="radio" name="gender-mentor"
-												id="others-mentor">
-											<label class="custom-control-label" for="others-mentor"
-												id="genderO-mentor">Others</label>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="row w-75 mb-4">
-
-								<div class="col-12 px-0 mb-4 col-md-6 pl-md-0 pr-md-3 mb-md-0">
-									<label for="email-mentor">Email <span>*</span></label>
-									<input type="email" class="form-control" id="email-mentor"
-										placeholder="abc123@example.com">
-								</div>
-
-								<div class="col-12 px-0 col-md-6 pr-md-0 pl-md-3">
-									<label for="contact-mentor">Contact No. <span>*</span></label>
-									<input type="tel" id="contact-mentor" class="form-control"
-										placeholder="+91 1234567890" pattern="[0-9]{10}">
-								</div>
-							</div>
-
-							<div class="row w-75 mb-4">
-								<div class="col px-0">
-									<label for="username-mentor">User name <span>*</span> <i
-											id="username-tooltip-mentor" type="button" class="fas fa-info-circle"
-											data-toggle="tooltip" title="This is temporary"></i></label>
-									<div class="input-group">
-										<div class="input-group-prepend">
-											<span class="input-group-text" id="basic-addon1">@</span>
-										</div>
-										<input type="text" class="form-control" placeholder="Username"
-											aria-label="Username" aria-describedby="basic-addon1" id="username-mentor">
-									</div>
-								</div>
-							</div>
-
-							<div class="row w-75 mb-4">
-
-								<div class="col-12 px-0 mb-4 col-md-6 pl-md-0 pr-md-3 mb-md-0">
-									<label for="password-mentor">Password <span>*</span></label>
-									<div class="input-group">
-										<input type="password" class="form-control" id="password-mentor"
-											placeholder="Password">
-										<div class="input-group-append">
-											<div class="input-group-text">
-												<i class="fa fa-eye-slash" type="button" id="password-icon-mentor"></i>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div class="col-12 px-0 col-md-6 pr-md-0 pl-md-3">
-									<label for="confirm-mentor">Confirm Password <span>*</span></label>
-									<div class="input-group">
-										<input type="password" class="form-control" id="confirm-mentor"
-											placeholder="Confirm Password">
-										<div class="input-group-append">
-											<div class="input-group-text">
-												<i class="fa fa-eye-slash" type="button" id="confirm-icon-mentor"></i>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="row w-75 mb-4">
-								<div class="col px-0">
-									<label for="occupation-mentor">Occupation <span>*</span></label>
-									<input type="text" id="occupation-mentor" class="form-control field-reset">
-								</div>
-							</div>
-
-							<div class="row w-75 mb-4">
-								<div class="col px-0">
-									<label for="company-mentor">Company Name<span>*</span></label>
-									<input type="text" id="company-mentor" class="form-control field-reset">
-								</div>
-							</div>
-
-							<div class="row w-75 mb-4" id="field-row">
-
-								<div class="col-12 px-0 mb-4 col-md-6 pl-md-0 pr-md-3 mb-md-0">
-									<label for="field-mentor">Field <span>*</span></label>
-									<select class="custom-select field-reset" id="field-mentor">
-										<option></option>
-										<option>Agriculture</option>
-										<option>Computer</option>
-										<option>Others</option>
-									</select>
-								</div>
-
-								<div class="col-12 px-0 col-md-6 pr-md-0 pl-md-3">
-									<label for="subfield-mentor">Subfield <span>*</span></label>
-									<select class="custom-select field-reset" id="subfield-mentor">
-										<option></option>
-										<option>Front end</option>
-										<option>Back end</option>
-									</select>
-								</div>
-							</div>
-
-							<div class="row w-75 mb-4">
-								<div class="col px-0">
-									<label for="company-mentor">Timing <span>*</span> <i id="payrate-tooltip-mentor"
-											type="button" class="fas fa-info-circle" data-toggle="tooltip"
-											title="Provide your available timing for everyday"></i>
+						<div class="d-flex align-items-center justify-content-around mt-4">
+							<div class="input-group w-100">
+								<div class="custom-file">
+									<input type="file" class="custom-file-input m-2" id="upload-mentor"
+										aria-describedby="inputGroupFileAddon01">
+									<label class="custom-file-label" for="upload-mentee">Choose
 									</label>
-									<textarea type="text" rows="3" id="timing-mentor"
-										class="form-control field-reset"></textarea>
+
+								</div>
+								<div class="input-group-append">
+									<button class="btn btn-danger" type="button" id="img-clear-mentor">Clear</button>
 								</div>
 							</div>
-
-							<div class="row w-75 mb-2">
-								<div class=" col  px-0 col-md-6 pl-md-0 pr-md-3 d-flex flex-column">
-									<label for="slider-value-mentor">Pay Rate <span>*</span> <i
-											id="payrate-tooltip-mentor" type="button" class="fas fa-info-circle"
-											data-toggle="tooltip" title="This is temporary"></i></label>
-
-									<input type="range" min="0" max="500000" id="slider-mentor" value="0" class="mb-3">
-									<div class="input-group mb-3">
-										<div class="input-group-prepend">
-											<span class="input-group-text" id="basic-addon1"><i
-													class="fas fa-rupee-sign"></i></span>
-										</div>
-										<input type="number" class="form-control" id="slider-value-mentor"
-											placeholder="0" aria-label="payrate" aria-describedby="basic-addon1">
-										<div class="input-group-append">
-											<span class="input-group-text">.00</span>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="row w-75 mt-2 mb-3">
-								<div class="col d-flex justify-content-center justify-content-md-end">
-									<button type="reset" class="btn btn-warning rounded mr-2"
-										id="cancel-mentor">Cancel</button>
-									<button type="reset" class="btn btn-danger rounded mr-2"
-										id="reset-mentor">Reset</button>
-									<input type="submit" class="btn btn-success  rounded mr-2">
-								</div>
-							</div>
-
 						</div>
 					</div>
 				</div>
+
+				<div class="row w-75">
+					<label for="name-mentor">Name <span>*</span></label>
+				</div>
+
+				<div class="row w-75 mb-4">
+					<div class="col-12 px-0 mb-2 col-md-6 pl-md-0 pr-md-3 mb-md-0">
+						<input type="text" placeholder="First Name" class="form-control" id="name-mentor">
+					</div>
+					<div class="col-12 px-0  col-md-6 pr-md-0 pl-md-3">
+						<input type="text" placeholder="Last Name" class="form-control">
+					</div>
+				</div>
+
+				<div class="row w-75 mb-4">
+					<div class="col px-0">
+						<label for="shortbio-mentor">Short Bio <span>*</span> <i id="shortbio-tooltip-mentor"
+								type="button" class="fas fa-info-circle" data-toggle="tooltip" data-placement="right"
+								title="Minimun 30 and Maximum 80 letter"></i></label>
+						<input type="text" rows="3" minlength="30" maxlength="80" class="form-control"
+							id="shortbio-mentor" />
+					</div>
+				</div>
+
+				<div class="row w-75 mb-4">
+
+					<div class="col-12 px-0 mb-4 col-md-6 pl-md-0 pr-md-3 mb-md-0">
+						<label for="dob-mentor">Date of Birth <span>*</span></label>
+						<input type="date" class="form-control" id="dob-mentor">
+					</div>
+
+					<div class="col-12 px-0 col-md-6 pr-md-0 pl-md-3">
+						<label for="gender-group-mentor" class="mb-2">Gender <span>*</span></label>
+						<div class="d-flex justify-content-around" id="gender-group-mentor">
+							<div class="custom-control custom-radio custom-control-inline">
+								<input type="radio" class="custom-control-input" name="gender-mentor" id="male-mentor">
+								<label class="custom-control-label" for="male-mentor" id="genderM-mentor">Male</label>
+							</div>
+							<div class="custom-control custom-radio custom-control-inline ">
+								<input class="custom-control-input" type="radio" name="gender-mentor"
+									id="female-mentor">
+								<label class="custom-control-label" for="female-mentor"
+									id="genderF-mentor">Female</label>
+							</div>
+							<div class="custom-control custom-radio custom-control-inline">
+								<input class="custom-control-input" type="radio" name="gender-mentor"
+									id="others-mentor">
+								<label class="custom-control-label" for="others-mentor"
+									id="genderO-mentor">Others</label>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row w-75 mb-4">
+
+					<div class="col-12 px-0 mb-4 col-md-6 pl-md-0 pr-md-3 mb-md-0">
+						<label for="email-mentor">Email <span>*</span></label>
+						<input type="email" class="form-control" id="email-mentor" placeholder="abc123@example.com">
+					</div>
+
+					<div class="col-12 px-0 col-md-6 pr-md-0 pl-md-3">
+						<label for="contact-mentor">Contact No. <span>*</span></label>
+						<input type="tel" id="contact-mentor" class="form-control" placeholder="+91 1234567890"
+							pattern="[0-9]{10}">
+					</div>
+				</div>
+
+				<div class="row w-75 mb-4">
+					<div class="col px-0">
+						<label for="username-mentor">User name <span>*</span> <i id="username-tooltip-mentor"
+								type="button" class="fas fa-info-circle" data-toggle="tooltip"
+								title="This is temporary"></i></label>
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="basic-addon1">@</span>
+							</div>
+							<input type="text" class="form-control" placeholder="Username" aria-label="Username"
+								aria-describedby="basic-addon1" id="username-mentor">
+						</div>
+					</div>
+				</div>
+
+				<div class="row w-75 mb-4">
+
+					<div class="col-12 px-0 mb-4 col-md-6 pl-md-0 pr-md-3 mb-md-0">
+						<label for="password-mentor">Password <span>*</span></label>
+						<div class="input-group">
+							<input type="password" class="form-control" id="password-mentor" placeholder="Password">
+							<div class="input-group-append">
+								<div class="input-group-text">
+									<i class="fa fa-eye-slash" type="button" id="password-icon-mentor"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-12 px-0 col-md-6 pr-md-0 pl-md-3">
+						<label for="confirm-mentor">Confirm Password <span>*</span></label>
+						<div class="input-group">
+							<input type="password" class="form-control" id="confirm-mentor"
+								placeholder="Confirm Password">
+							<div class="input-group-append">
+								<div class="input-group-text">
+									<i class="fa fa-eye-slash" type="button" id="confirm-icon-mentor"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row w-75 mb-4">
+					<div class="col px-0">
+						<label for="occupation-mentor">Occupation <span>*</span></label>
+						<input type="text" id="occupation-mentor" class="form-control field-reset">
+					</div>
+				</div>
+
+				<div class="row w-75 mb-4">
+					<div class="col px-0">
+						<label for="company-mentor">Company Name<span>*</span></label>
+						<input type="text" id="company-mentor" class="form-control field-reset">
+					</div>
+				</div>
+
+				<div class="row w-75 mb-4" id="field-row">
+
+					<div class="col-12 px-0 mb-4 col-md-6 pl-md-0 pr-md-3 mb-md-0">
+						<label for="field-mentor">Field <span>*</span></label>
+						<select class="custom-select field-reset" id="field-mentor">
+							<option></option>
+							<option>Agriculture</option>
+							<option>Computer</option>
+							<option>Others</option>
+						</select>
+					</div>
+
+					<div class="col-12 px-0 col-md-6 pr-md-0 pl-md-3">
+						<label for="subfield-mentor">Subfield <span>*</span></label>
+						<select class="custom-select field-reset" id="subfield-mentor">
+							<option></option>
+							<option>Front end</option>
+							<option>Back end</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="row w-75 mb-4">
+					<div class="col px-0">
+						<label for="company-mentor">Timing <span>*</span> <i id="payrate-tooltip-mentor" type="button"
+								class="fas fa-info-circle" data-toggle="tooltip"
+								title="Provide your available timing for everyday"></i>
+						</label>
+						<textarea type="text" rows="3" id="timing-mentor" class="form-control field-reset"></textarea>
+					</div>
+				</div>
+
+				<div class="row w-75 mb-2">
+					<div class=" col  px-0 col-md-6 pl-md-0 pr-md-3 d-flex flex-column">
+						<label for="slider-value-mentor">Pay Rate <span>*</span> <i id="payrate-tooltip-mentor"
+								type="button" class="fas fa-info-circle" data-toggle="tooltip"
+								title="This is temporary"></i></label>
+
+						<input type="range" min="0" max="500000" id="slider-mentor" value="0" class="mb-3">
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="basic-addon1"><i
+										class="fas fa-rupee-sign"></i></span>
+							</div>
+							<input type="number" class="form-control" id="slider-value-mentor" placeholder="0"
+								aria-label="payrate" aria-describedby="basic-addon1">
+							<div class="input-group-append">
+								<span class="input-group-text">.00</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row w-75 mt-2 mb-3">
+					<div class="col d-flex justify-content-center justify-content-md-end">
+						<button type="reset" class="btn btn-warning rounded mr-2" id="cancel-mentor">Cancel</button>
+						<button type="reset" class="btn btn-danger rounded mr-2" id="reset-mentor">Reset</button>
+						<input type="submit" class="btn btn-success  rounded mr-2">
+					</div>
+				</div>
+
 			</div>
 		</form>
 	</div>
@@ -244,22 +227,13 @@
 	<script>
 		$(document).ready(function () {
 
-			$("#signup-mentor").click(function () {
-				$("#mymodal-mentor").modal("show");
-			});
-
 			$("#cancel-mentor").click(function () {
-				$("#mymodal-mentor").modal("hide");
 				$('#img-mentor').attr('src', "profile.png");
 			});
 
 			$("#reset-mentor").click(function () {
 				$('#img-mentor').attr('src', "profile.png");
 			})
-
-			$("#exit-in-signup-mentor").click(function () {
-				$("#mymodal-mentor").modal("hide");
-			});
 
 			$("#img-clear-mentor").click(function () {
 				$('#img-mentor').attr('src', "profile.png");

@@ -1,0 +1,15 @@
+.trans-h{
+    background-color:transparent;
+}
+
+.rounded-custom{
+    border-top-left-radius: 1.25rem!important;
+    border-bottom-left-radius: 1.25rem!important;
+    border-top-right-radius: 1.25rem!important;
+    border-bottom-right-radius: 1.25rem!important;     
+ }
+
+.grad2 {
+    background: rgb(53, 91, 192);
+    background: linear-gradient(7deg, rgba(53, 91, 192, 1) 0%, rgba(44, 130, 186, 1) 33%, rgba(44, 130, 186, 1) 67%, rgba(53, 91, 192, 1) 100%);
+}
