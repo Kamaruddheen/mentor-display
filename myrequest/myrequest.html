@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>My Request</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<!-- FontAwesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+		integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<style>
+		.name th {
+			font-family: Cambria, Arial, Helvetica, "sans-serif";
+		}
+
+		.btn-cust {
+			transition: transform 80ms ease-in;
+		}
+
+		.btn-cust:active {
+			transform: scale(0.95);
+		}
+
+		.btn-cust:active {
+			outline: none !important;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="container my-3">
+		<div class="card shadow-sm my-3 w-100">
+			<div class="card-header pb-0">
+				<div class="card-title">Request Details</div>
+			</div>
+			<div class="card-body">
+				<div class="table-responsive">
+					<table class="table table-striped">
+						<caption class="d-sm-block d-md-none">Swipe&nbsp;Right&nbsp;<i class="fas fa-scroll"></i>
+						</caption>
+						<thead class="thead-dark">
+							<tr>
+								<th>Token</th>
+								<th>Mentor</th>
+								<th>Status</th>
+								<th>Date/Time</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+
+							<tr>
+								<td>#123456789</td>
+								<td>
+									<h6 class="name">Preethi</h6><small class="text-muted">@preethi</small>
+								</td>
+								<td>
+									<h6><span class="badge badge-success badge-pill px-3 py-1">Accepted</span></h6>
+								</td>
+								<td><time class="text-muted">Jun&nbsp;11&nbsp;at&nbsp;09:30</time></td>
+								<td><button type="button"
+										class="btn btn-outline-primary rounded-lg btn-cust">Pay&nbsp;Now</button></td>
+							</tr>
+
+							<tr>
+								<td>2345678901</td>
+								<td>
+									<h6 class="name">Deepthi</h6><small class="text-muted">@deepthi</small>
+								</td>
+								<td>
+									<h6><span class="badge badge-success badge-pill px-3 py-1">Accepted</span></h6>
+								</td>
+								<td><time class="text-muted">Jun&nbsp;11&nbsp;at&nbsp;09:30</time></td>
+								<td><button type="button"
+										class="btn btn-outline-primary rounded-lg btn-cust">Pay&nbsp;Now</button></td>
+							</tr>
+
+							<tr>
+								<td>34567890123</td>
+								<td>
+									<h6 class="name">Hariesh&nbsp;Kishore</h6><small
+										class="text-muted">@hariesh&nbsp;kishore</small>
+								</td>
+								<td>
+									<h6><span class="badge badge-success badge-pill px-3 py-1">Accepted</span></h6>
+								</td>
+								<td><time class="text-muted">Jun&nbsp;11&nbsp;at&nbsp;09:30</time></td>
+								<td><button type="button"
+										class="btn btn-outline-primary rounded-lg btn-cust">Pay&nbsp;Now</button></td>
+							</tr>
+
+							<tr>
+								<td>45678901234</td>
+								<td>
+									<h6 class="name">Sujith&nbsp;Singh</h6><small
+										class="text-muted">@sujithsingh235</small>
+								</td>
+								<td>
+									<h6><span class="badge badge-danger badge-pill px-3 py-1">Rejected</span></h6>
+								</td>
+								<td><time class="text-muted">Jun&nbsp;11&nbsp;at&nbsp;09:30</time></td>
+								<td><button type="button"
+										class="btn btn-outline-secondary rounded-lg btn-cust">Reason</button>
+								</td>
+							</tr>
+
+							<tr>
+								<td>56789012345</td>
+								<td>
+									<h6 class="name">Muhammad&nbsp;Kamarudheen</h6><small
+										class="text-muted">@muhammad&nbsp;kamarudheen</small>
+								</td>
+								<td>
+									<h6><span class="badge badge-info badge-pill px-3 py-1">Pending</span></h6>
+								</td>
+								<td><time class="text-muted">Jun&nbsp;11&nbsp;at&nbsp;09:30</time></td>
+								<td><button type="button"
+										class="btn btn-outline-warning rounded-lg btn-cust">Cancel</button>
+								</td>
+							</tr>
+
+							<tr>
+								<td>67890123456</td>
+								<td>
+									<h6 class="name">Srinivasan</h6><small class="text-muted">@singer&nbsp;srini</small>
+								</td>
+								<td>
+									<h6><span class="badge badge-danger badge-pill px-3 py-1">Rejected</span></h6>
+								</td>
+								<td><time class="text-muted">Jun&nbsp;11&nbsp;at&nbsp;09:30</time></td>
+								<td><button type="button"
+										class="btn btn-outline-secondary rounded-lg btn-cust">Reason</button>
+								</td>
+							</tr>
+
+							<tr>
+								<td>78901234567</td>
+								<td>
+									<h6 class="name">Harish Babu</h6><small class="text-muted">@harish babu</small>
+								</td>
+								<td>
+									<h6><span class="badge badge-warning badge-pill px-3 py-1">Cancelled</span></h6>
+								</td>
+								<td><time class="text-muted">Jun&nbsp;11&nbsp;at&nbsp;09:30</time></td>
+								<td><button type="button" class="btn btn-outline-danger rounded-lg btn-cust"
+										disabled>Abandoned</button>
+								</td>
+							</tr>
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
