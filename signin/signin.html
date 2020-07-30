@@ -2,94 +2,102 @@
 <html>
 
 <head>
-    <title>Chat</title>
+    <title>Sign In</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <!-- animate css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <!-- Custom css -->
-    <link rel="stylesheet" href="signin.css">
+    <style>
+        .rounded-custom {
+            border-top-left-radius: 1.25rem !important;
+            border-bottom-left-radius: 1.25rem !important;
+            border-top-right-radius: 1.25rem !important;
+            border-bottom-right-radius: 1.25rem !important;
+        }
+
+        .grad2 {
+            background-color: white;
+            background: linear-gradient(7deg, rgba(53, 91, 192, 1) 0%, rgba(44, 130, 186, 1) 33%, rgba(44, 130, 186, 1) 67%, rgba(53, 91, 192, 1) 100%);
+        }
+    </style>
 </head>
 
 <body class="grad2">
-    <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
-        <div class="row mx-0 d-flex justify-content-center align-items-center rounded-custom">
+    <form action="#" method="" class="container d-flex justify-content-center align-items-center"
+        style="height: 100vh;">
 
-
-            <div class="col-4">
-                <div class="card my-2 shadow rounded rounded-custom bg-dark">
-                    <div class="card-body">
-                        <div class="row mx-0 justify-content-center text-white">
-                            <h4 class="card-title">Welcome, Back</h4>
-                            <h3 class="card-title" id="chang">Mentee</h3>
-                            <label class="card-title" id="quotes">My mentor said, 'Let's go do it,' not 'You go do
-                                it.</label>
-                        </div>
-                    </div>
-                    <div class="card-body mx-auto">
-                        <button class="btn btn-primary rounded btn-light text" type="button" id="changer">Login as
-                            Mentor</button>
-                    </div>
+        <div class="col-lg-6 col-md-10 p-0">
+            <!-- Card Starting -->
+            <div class="card my-2 p-0 shadow-lg rounded rounded-custom">
+                <!-- Title Login -->
+                <div class="row mx-0 my-3 justify-content-center">
+                    <h2 class="card-title font-weight-bold">Login</h2>
                 </div>
-            </div>
+                <!-- card body -->
+                <div class="card-body">
+                    <div class="row mx-0">
 
-            <div class="col-8">
-                <div class="card my-2 shadow rounded rounded-custom">
-                    <div class="row mx-0 my-3 justify-content-center">
-                        <h3 class="card-title">Login</h3>
-                    </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="input-group mb-3 mx-3">
-                                <input type="text" class="form-control" placeholder="Username" aria-label="Username">
-                            </div>
-                            <div class="input-group mb-3 mx-3">
-                                <input type="password" class="form-control" placeholder="Password" id="password">
-                                <div class="input-group-append">
-                                    <div class="input-group-text">
-                                        <i class="fa fa-eye-slash" type="button" id="password-icon"></i>
-                                    </div>
+                        <!-- Username  -->
+                        <div class="w-100 mb-3">
+                            <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+                        </div>
+
+                        <!-- Password -->
+                        <div class="input-group mb-3">
+                            <input type="password" class="form-control" placeholder="Password" id="password">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <i class="fa fa-eye-slash" type="button" id="password-icon"></i>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <button class="btn btn-primary mx-auto rounded btn-dark" type="submit" value="Mentee"
-                                id="login">Login</button>
+
+                        <!-- Role -->
+                        <div class="w-100 mb-3">
+                            <select id="inputState" class="form-control ">
+                                <option selected>Choose a Role</option>
+                                <option>Mentee</option>
+                                <option>Mentor</option>
+                            </select>
                         </div>
+
+                        <!-- Forgot Password -->
+                        <div class="w-100 d-flex justify-content-start align-items-center mb-3">
+                            <a href="#" class="nav-link">Forgot your Password?</a>
+                        </div>
+
+                        <!-- SignUp & Login -->
+                        <div class="w-100 d-flex justify-content-between align-items-center mb-3">
+                            <div class="col-6 p-0">
+                                <a href="#" class="btn btn-secondary float-left">Sign&nbsp;Up</a>
+                            </div>
+                            <div class="col-6 p-0">
+                                <button class="btn btn-primary float-right" type="submit">Login</button>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
-
         </div>
-    </div>
+    </form>
 
     <script>
-        $("#changer").click(function () {
-            if ($("#login").val() == "Mentee") {
-                $("#login").val("Mentor");
-                $("#changer").text("Login as Mentee");
-            }
-            else if ($("#login").val() == "Mentor") {
-                $("#login").val("Mentee");
-                $("#changer").text("Login as Mentor");
-            }
-        })
-        $("#password-icon").click(function () {
-            $(this).toggleClass(" fa-eye fa-eye-slash");
-            if ($("#password").attr("type") == "password") {
-                $("#password").attr("type", "text");
-            } else {
-                $("#password").attr("type", "password");
-            }
+        $(document).ready(function () {
+            // Password Icon
+            $("#password-icon").click(function () {
+                $(this).toggleClass(" fa-eye fa-eye-slash");
+                if ($("#password").attr("type") == "password") {
+                    $("#password").attr("type", "text");
+                } else {
+                    $("#password").attr("type", "password");
+                }
+            })
         });
     </script>
 </body>
