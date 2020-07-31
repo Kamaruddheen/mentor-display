@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pay Now</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <button type="button" class="btn btn-primary" id="paynow_modal">PayNow</button>
+        <div class="modal fade" id="exampleModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
+            role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: rgba(0,0,0,.03);">
+                        <h5 class="modal-title" id="exampleModalLabel">Check Out</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- <form> -->
+                        <h5 class="modal-title">Summary</h5>
+                        <div class="dropdown-divider"></div>
+                        <table class="font-italic">
+                            <tbody>
+                                <tr>
+                                    <td scope="row" class="col-form-label">Mentor&nbsp;id</td>
+                                    <td class="p-3">:</td>
+                                    <td class="text-muted">@username</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="col-form-label">Mentor&nbsp;Name</td>
+                                    <td class="p-3">:</td>
+                                    <td class="text-muted">Muhammadh Kamaruddheen</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="col-form-label">Hour&nbsp;(per&nbsp;day)</td>
+                                    <td class="p-3">:</td>
+                                    <td class="text-muted">2&nbsp;hours</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="col-form-label">Total&nbsp;Days</td>
+                                    <td class="p-3">:</td>
+                                    <td class="text-muted">30&nbsp;days</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="dropdown-divider"></div>
+                        <h5 class="modal-title">Total Amount <label
+                                class="col-form-label float-right p-0">&#8377;20000</label></h5>
+                        <!-- </form> -->
+                    </div>
+                    <div class="modal-footer" style="background-color: rgba(0,0,0,.03);">
+                        <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Pay&nbsp;Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#paynow_modal").click(function () {
+                $("#exampleModal").modal("show");
+            })
+        });
+    </script>
+</body>
